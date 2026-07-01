@@ -17,18 +17,18 @@
 
 .getstartedbanner-container p {
   font-size: 30px;
-  color: rgb(180, 180, 180);
+  color: rgb(255, 255, 255);
   text-transform: initial;
   line-height: 34px;
 }
 
 .getstartedbanner-container button {
   font-size: 26px;
-  color: rgb(253, 253, 253);
-  background-color: #004696;
-}
+  color: rgb(20, 20, 20);
+  background-color: #ffd8a4;
+  border: 1px solid #111111;}
 
 .getstartedbanner-container button:hover {
-  background-color: #005ac2;
-  border: 1px solid #488ac0;
+  background-color: #ffffff;
+  border: 1px solid #111111;
 }
