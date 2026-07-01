@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Berylium Rg';
+  src: url('/fonts/Berylium Rg.eot');
+  src: local('/fonts/Berylium Rg.eot');
+}

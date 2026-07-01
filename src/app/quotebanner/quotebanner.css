@@ -1,0 +1,21 @@
+.quotebanner-container {
+  width: 100%;
+  height: 260px;
+  background-image: url('/images/quotebanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.quotebanner-container h2 {
+  font-size: 34px;
+  color: white;
+  font-style: italic;
+  text-transform: initial;
+}
+
+.quotebanner-container h3 {
+  font-size: 30px;
+  color: rgb(150, 150, 150);
+  text-transform: initial;
+}

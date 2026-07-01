@@ -1,0 +1,34 @@
+.getstartedbanner-container {
+  width: 100%;
+  height: 340px;
+  background-image: url('/images/mcpbanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.getstartedbanner-container h1 {
+  font-size: 48px;
+  color: white;
+  text-transform: initial;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.getstartedbanner-container p {
+  font-size: 30px;
+  color: rgb(180, 180, 180);
+  text-transform: initial;
+  line-height: 34px;
+}
+
+.getstartedbanner-container button {
+  font-size: 26px;
+  color: rgb(253, 253, 253);
+  background-color: #004696;
+}
+
+.getstartedbanner-container button:hover {
+  background-color: #005ac2;
+  border: 1px solid #488ac0;
+}

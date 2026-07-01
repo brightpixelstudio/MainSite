@@ -1,0 +1,716 @@
+<div class="row" id="work-section">
+  <div class="designs-container col-12">
+    <div class="row pt-5 ps-4">
+      <div class="col-1"></div>
+      <div
+        id="DesignsWebsite"
+        class="col-3 barn"
+        (click)="toggleWebsiteContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageWebsite" alt="" />
+        <h1 [class]="isVisableWebsiteContent ? '' : 'disabled'">Websites</h1>
+      </div>
+      <div
+        id="DesignsPrint"
+        class="col-3 barn"
+        (click)="togglePrintContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImagePrint" alt="" />
+        <h1 [class]="isVisablePrintContent ? '' : 'disabled'">Print</h1>
+      </div>
+      <div
+        id="DesignsMobile"
+        class="col-3 barn"
+        (click)="toggleMobileContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageMobile" alt="" />
+        <h1 [class]="isVisableMobileContent ? '' : 'disabled'">Mobile</h1>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    @if (isVisableWebsiteContent) {
+      <div class="col-12" class="gallerydiv">
+        <fslightbox [toggler]="toggler" [sources]="sources" />
+        <button id="GalleryButton" (click)="toggler = !toggler">View Gallery</button>
+      </div>
+      <div id="DesignsWebsiteContent" class="designs">
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/33_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/33_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/30_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/30_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/31_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/31_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/32_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/32_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/34_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/34_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/35_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/35_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/36_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/36_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/37_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/37_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/38_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/38_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/39_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/39_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/40_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/40_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/27_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/27_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/1_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/1_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/2_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/2_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/3_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/3_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/4_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/4_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/5_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/5_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/6_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/6_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/7_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/7_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/8_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/8_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/9_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/9_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/10_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/10_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/11_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/11_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/12_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/12_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/29_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/29_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/14_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/14_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/15_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/15_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/16_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/16_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/17_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/17_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/18_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/18_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/19_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/19_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/20_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/20_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/21_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/21_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/22_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/22_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/23_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/23_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/24_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/24_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-4 ps-2 design">
+              <a
+                href="/images/ourwork/web/large/25_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/25_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/26_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/26_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 design">
+              <a
+                href="/images/ourwork/web/large/27_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/27_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-4 pb-5 design">
+              <a
+                href="/images/ourwork/web/large/28_Image.jpg"
+                target="_blank"
+                data-gallery="example-gallery"
+                class="col-l-3"
+              >
+                <img src="/images/ourwork/web/28_Image.jpg" class="img-fluid img-thumbnail" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisablePrintContent) {
+      <div id="DesignsPrintContent" class="designs">
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/4_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/5_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/6_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/1_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/2_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/3_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/7_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/8_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/9_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/10_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/11_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/12_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/13_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/14_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/15_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="images/ourwork/print/25_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/17_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/18_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/19_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/20_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/21_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/22_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/print/23_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 pb-5 design">
+              <img src="/images/ourwork/print/24_Image.jpg" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisableMobileContent) {
+      <div id="DesignsMobileContent" class="designs">
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/mobile/4_Image.png" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/mobile/5_Image.png" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/mobile/1_Image.png" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <div class="row pt-4 ps-2 design">
+              <img src="/images/ourwork/mobile/2_Image.png" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row pt-4 ps-2 pb-5 design">
+              <img src="/images/ourwork/mobile/3_Image.png" class="img-fluid img-thumbnail" />
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

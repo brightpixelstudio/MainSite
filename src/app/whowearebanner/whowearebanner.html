@@ -1,0 +1,375 @@
+<div class="row" id="about-section">
+  <div class="whoweare-container col-12">
+    <div class="row">
+      <div class="col-1"></div>
+      <div
+        id="WhoWeAreWhoWeAre"
+        class="col-3 barn"
+        (click)="togglesWhoWeAreContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageWhoWeAre" alt="" />
+        <h1 [class]="isVisableWhoWeAreContent ? '' : 'disabled'">Who We Are</h1>
+      </div>
+      <div
+        id="WhoWeAreCoreValues"
+        class="col-3 barn"
+        (click)="toggleCoreValuesContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageCoreValues" alt="" />
+        <h1 [class]="isVisableCoreValuesContent ? '' : 'disabled'">Core Values</h1>
+      </div>
+      <div
+        id="WhoWeAreOurProcess"
+        class="col-3 barn"
+        (click)="toggleOurProcessContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageOurProcess" alt="" />
+        <h1 [class]="isVisableOurProcessContent ? '' : 'disabled'">Our Process</h1>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    @if (isVisableWhoWeAreContent) {
+      <div id="WhoWeAreWhoWeAreContent" class="whoweares">
+        <div class="row">
+          <div class="col-7">
+            <div class="row pt-4 ps-4 whoweare">
+              <h2>Who is SunRay Designs?</h2>
+              <h3>
+                We are Driven by a Passion to <span>Create Products</span> that are Unique, Get
+                Noticed and
+                <span>Go Beyond Your Expectations.</span>
+              </h3>
+              <p>
+                Hello! SunRay Designs is a full-service Design and Development Studio for small to
+                medium businesses located in the Greenville, South Carolina area. We specialize in
+                creating and promoting unique and distinctive websites that allow you to communicate
+                your message effectively. If you have a new business that needs a website or an
+                existing one that needs re-branding - we can help!
+              </p>
+              <p>
+                Let us help you make your website stand out from the others. We take great pride
+                ensuring that our websites are easy to use and detail-oriented. Our design and
+                development process is simple, effective, and quick. Our clients and their time are
+                very important to us. We make sure that every project is a success, exceeds
+                expectations and on-time.
+              </p>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="row p-5 whoweare"><img src="/images/barnpic.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="row row px-3">
+          <div class="col-12">
+            <hr />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row p-3 whoweare">
+            <div class="col-6">
+              <div>
+                <h3>
+                  <img src="/images/caplogo.png" title="Philosophy of SunRay" />
+                  Philosophy
+                </h3>
+                <p>
+                  When we started SunRay Designs we established some ground rules that we insist be
+                  followed. We used our past experience to ensure that we didn't make the same
+                  mistakes we had seen from other companies in the past. We wanted SunRay Designs to
+                  stay focused on a core set of values and beliefs and not lose sight of what's most
+                  important - our clients satisfaction.
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div>
+                <h3>
+                  <img src="/images/caselogo.png" title="Workforce of SunRay" /> Our Workforce
+                </h3>
+                <p>
+                  Each employee at SunRay Designs has years of experience in their field and is
+                  responsible for dealing directly with you when it comes to your project. There are
+                  no uninformed sales people to comb through to get to the person working directly
+                  on your project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisableCoreValuesContent) {
+      <div class="whoweares" id="WhoWeAreCoreValuesContent">
+        <div class="row">
+          <div class="col-12">
+            <div class="row pt-4 ps-4 corevalues">
+              <h2>SunRay Designs Core Values</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row p-3 corevalue">
+            <div class="col-6">
+              <div>
+                <h3>
+                  <img src="/images/relationshipicon.gif" title="Relationship of SunRay Designs" />
+                  Build a Relationship
+                </h3>
+                <p>
+                  Build a relationship with the customer. In order to create a website that reflects
+                  an individual's tastes you have to get to know the client. We take our
+                  relationships with our clients to a more personal level so that we may better
+                  understand their visions and ideas.
+                </p>
+                <hr />
+                <h3>
+                  <img
+                    src="/images/directionicon.gif"
+                    title="Make the Best Decision SunRay Designs"
+                  />
+                  Make the Best Decision
+                </h3>
+                <p>
+                  Help the customer make the 'best' choice based on their needs. There is no one way
+                  to create a website. SunRay Designs will give you alternative options when
+                  designing your website. We make sure you fully understand the opportunities of
+                  each one presented with the pros and cons thoroughly explained.
+                </p>
+                <hr />
+                <h3>
+                  <img
+                    src="/images/communicationicon.gif"
+                    title="Direct Communication of SunRay Designs"
+                  />
+                  Direct Communication
+                </h3>
+                <p>
+                  Work directly with a developer. Once your project is started there is no middle
+                  man to work through. You communicate and meet directly with the person who is
+                  responsible for creating your application. Your time is valuable and this helps
+                  keep project meetings specific, brief and productive.
+                </p>
+                <hr />
+                <h3>
+                  <img src="/images/differenticon.gif" title="Stand Out with SunRay Designs" />
+                  Stand Out
+                </h3>
+                <p>
+                  At SunRay Designs layout and presentation is one of our number one concerns when
+                  developing your application. Don't be fooled that more is better on a screen. On
+                  an average, a customer will only spend a mere 20 seconds on a page before leaving
+                  it. This drops to a mere 10 seconds if the persons gets confused or doesn't know
+                  what to do next. <br /><br />
+                  All of our designs are created to help guide the user through the website. We keep
+                  each screen focused on its main purpose and don't overcrowd it with unnecessary
+                  information. We keep it light, easy to use and provoke a person wanting to return
+                  at a later time.
+                </p>
+                <hr />
+                <h3>
+                  <img src="/images/creativeicon.gif" title="Creative SunRay Designs" /> Be Creative
+                </h3>
+                <p>
+                  Getting noticed on the web can be tough. With millions of websites online standing
+                  out can be quite an achievement. We focus on making sure your website will get you
+                  noticed. We strive to keep your customers wanting to return and telling others
+                  about you. Our creative staff designs your site from scratch with no templates.
+                </p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div>
+                <h3>
+                  <img src="/images/needsicon.gif" title="Customer Needs of SunRay Designs" />
+                  Customer Needs
+                </h3>
+                <p>
+                  Put the customer's needs and ideas first. This is not just a phrase at SunRay
+                  Designs but an everyday requirement. Each and every client is treated like an
+                  individual and not just a project.
+                </p>
+                <hr />
+                <h3>
+                  <img src="/images/leanicon.gif" title="Keep It Lean of SunRay Designs" />
+                  Keep It Lean
+                </h3>
+                <p>
+                  Keep the company lean. We have seen many companies grow almost to the point of a
+                  standstill. They hire people who treat their position as a job and not a passion.
+                  At SunRay Designs we stay lean to help guarantee the quickest turnaround time.
+                </p>
+                <hr />
+                <h3>
+                  <img src="/images/pricesicon.gif" title="Reasonable Prices of SunRay Designs" />
+                  Reasonable Prices
+                </h3>
+                <p>
+                  Keep prices reasonable. By staying lean and hiring only highly qualified people we
+                  able to keep our prices very reasonable. We guarantee to offer the highest quality
+                  software for the most reasonable price from any of our competitors.
+                </p>
+                <hr />
+                <h3>
+                  <img src="/images/simpleicon.gif" title="Keep is Simple of SunRay Designs" />
+                  Keep is Simple
+                </h3>
+                <p>
+                  Complicated doesn't mean tough to use. Right from the start, our applications our
+                  designed with user-ability in mind. We carefully evaluate every application we
+                  design making sure it flows easily from one screen to the next. Additionally, each
+                  screen is developed with ease-of-use and a certain level of 'fun' added in to make
+                  the users experience is a pleasant one.
+                </p>
+                <hr />
+                <h3>
+                  <img
+                    src="/images/qualifiedicon.gif"
+                    title="Qualified Employees of SunRay Designs"
+                  />
+                  Qualified Employees
+                </h3>
+                <p>
+                  Hire only highly qualified employees. At SunRay Designs we hire only experts in
+                  the respective fields. Our employees must be more than just job seekers. They must
+                  possess a certain level of passion for their work and show a commitment for
+                  producing the highest level of work possible.
+                </p>
+                <hr />
+                <h3><img src="/images/Listenicon.gif" title="Listen SunRay Designs" /> Listen</h3>
+                <p>
+                  Listen to your customers. In order to create a successful layout and design for
+                  your clients you must fully understand what it is they are asking for. Before we
+                  start developing your software we interview and listen to your expectations and
+                  concerns. This allows us to present to you an application that looks and feels
+                  exactly like you had in mind.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisableOurProcessContent) {
+      <div class="whoweares" id="WhoWeAreOurProcessContent">
+        <div class="row">
+          <div class="col-12">
+            <div class="row pt-4 ps-4 ourprocess">
+              <h2>SunRay Creation Process</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row ps-4">
+          <div class="col-4">
+            <table>
+              <tr>
+                <td>
+                  <img src="/images/step1.jpg" title="Step 1 of SunRay Designs" />
+                </td>
+                <td>
+                  <h3>Discovery</h3>
+                  <h4>We ask a lot of questions</h4>
+                  <p>
+                    Every project starts with listening. It's important that we understand your
+                    needs. We spend the time asking all the right questions and learn everything we
+                    can prior to starting your project. We review your objectives and goals and
+                    suggest various developmental and technological solutions. The result of this
+                    discovery session is a solid understanding of the work, functionality, and
+                    business processes.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-4">
+            <table>
+              <tr>
+                <td>
+                  <img src="/images/step2.jpg" title="Step 2 of SunRay Designs" />
+                </td>
+                <td>
+                  <h3>Plan</h3>
+                  <h4>Put On Our thinking caps</h4>
+                  <p>
+                    The same designers who were in the Discovery Phase start assembling user
+                    interaction diagrams and wireframes. From branding to functionality we prepare
+                    your website for the foundation for everything we do in this Phase. This ensures
+                    your final product will meet your business objectives and marketing goals.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-4">
+            <table>
+              <tr>
+                <td>
+                  <img src="/images/step3.jpg" title="Step 3 of SunRay Designs" />
+                </td>
+                <td>
+                  <h3>Design</h3>
+                  <h4>Where strategy meets design</h4>
+                  <p>
+                    The Design Phase entails conceptualizing the layout and creating an interface
+                    for your website. This means handing over the “blue prints” from the Strategy
+                    phase to the design team. Our highly skilled designers then create vision based
+                    on all the elements in the design phase. We continue with revisions through the
+                    design phase until a final design concept is approved.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="row ps-4">
+          <div class="col-12">
+            <hr />
+          </div>
+        </div>
+        <div class="row ps-4">
+          <div class="col-4">
+            <table>
+              <tr>
+                <td>
+                  <img src="/images/step4.jpg" title="Step 4 of SunRay Designs" />
+                </td>
+                <td>
+                  <h3>Build</h3>
+                  <h4>Time to roll-up our sleeves</h4>
+                  <p>
+                    Once the design received a green light, we build out the sites general
+                    architecture. The main structure, sub -pages and Cascading Style Sheets (CSS)
+                    are all created. From here the layouts are handed over to the development team
+                    so they may create all dynamic elements. Much of the programming and database
+                    development magic happens simultaneously with the architecture and content
+                    stages.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="col-4">
+            <table>
+              <tr>
+                <td>
+                  <img src="/images/step5.jpg" title="Step 5 of SunRay Designs" />
+                </td>
+                <td>
+                  <h3>Launch</h3>
+                  <h4>Unleash it to the world</h4>
+                  <p>
+                    After receiving your final approval, your website is ready to “go live”! We will
+                    upload your project to a live web server & submit your website to a handful of
+                    the most popular search engines such as Google, Bing and Yahoo.
+                  </p>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

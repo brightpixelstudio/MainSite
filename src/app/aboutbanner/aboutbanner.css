@@ -1,0 +1,22 @@
+.aboutbanner-container {
+  width: 100%;
+  height: 260px;
+  background-image: url('/images/mcpbanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutbanner-container h1 {
+  font-size: 44px;
+  color: white;
+  text-transform: initial;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.aboutbanner-container h2 {
+  font-size: 32px;
+  color: rgb(187, 187, 187);
+  text-transform: initial;
+}

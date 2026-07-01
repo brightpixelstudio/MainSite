@@ -1,0 +1,44 @@
+.samplebanner-container {
+  width: 100%;
+  height: 750px;
+  background-image: url('/images/samplebanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.samplebanner-container h1 {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+  padding-top: 30px;
+  text-transform: capitalize;
+}
+
+.samplebanner-container h4 {
+  color: #a2b2cb;
+  text-align: center;
+  text-transform: none;
+  font-size: 32px;
+  font-weight: 100;
+}
+
+.gallerydiv{
+  text-align: center;
+  padding-top: 30px;
+}
+
+#GalleryButton {
+  font-family: 'Berylium Rg';
+  border: 1px solid #3264b6;
+  border-radius: 8px;
+  font-size: 20px;
+  background-color: rgb(145, 192, 255);
+  color: #003c58
+}
+
+#GalleryButton:hover {
+  background-color: rgb(199, 228, 255);
+  color: #003c58
+}

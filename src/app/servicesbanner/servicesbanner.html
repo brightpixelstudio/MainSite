@@ -1,0 +1,148 @@
+<div class="row" id="services-section">
+  <div class="servicesbanner-container col-12">
+    <div class="row">
+      <div class="col-2"></div>
+      <div
+        (click)="toggleServicesDesignContent()"
+        id="ServicesDesign"
+        class="col-4 barn"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageDesign" alt="" />
+        <h1 #servicesDesignContentFont [class]="isVisableServicesDesignContent ? '' : 'disabled'">
+          Design
+        </h1>
+      </div>
+      <div
+        (click)="toggleServicesDevelopmentContent()"
+        id="ServicesDevelopment"
+        class="col-4 barn"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageDevelopment" alt="" />
+        <h1
+          #servicesDevelopmentContentFont
+          [class]="isVisableServicesDevelopmentContent ? '' : 'disabled'"
+        >
+          Development
+        </h1>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    @if (isVisableServicesDesignContent) {
+      <div id="ServicesDesignContent" class="services">
+        <div class="row">
+          <div class="col-4">
+            <div class="row p-5 service">
+              <div class="col-2"><img src="/images/paintbrush.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Creative and Branding</h3>
+                <p>
+                  Whether you are starting a new business or simply want to re-fresh or re-brand
+                  your current one we have the expertise to establish that new look. We have helped
+                  many business's bring an edge and rise to the next level with their branding.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row p-5 service">
+              <div class="col-2"><img src="/images/mouse.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Web Design</h3>
+                <p>
+                  Having a professionally designed website will help ensure your sending the right
+                  message to your customers. SunRay Studios specializes in creating custom and
+                  unique websites for less than you probably imagine.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row p-5 service">
+              <div class="col-2"><img src="/images/print.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Print and Logo Design</h3>
+                <p>
+                  Sending one cohesive message to your customers is important. Fill out your
+                  companies look-and-feel with coordinating business cards, logos, postcards and
+                  more. SunRay Studios not only does digital design but print and logo creation
+                  also.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisableServicesDevelopmentContent) {
+      <div class="services" id="ServicesDevelopmentContent">
+        <div class="row">
+          <div class="col-3">
+            <div class="row pt-5 pl-5 service">
+              <div class="col-2"><img src="/images/webdevelopment.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Web Development</h3>
+                <p>
+                  There is a distinction between Web Development and Web Design. Development deals
+                  with how a website is created. If not created correctly your website can become
+                  costly to maintain. Every website at SunRay Studios is handed over to a
+                  <a
+                    href="http://www.microsoft.com/learning/en/us/certification/cert-benefits-emp.aspx"
+                    target="_blank"
+                    title="Learn more about a Microsoft Certified Professional "
+                    >Microsoft Certified Professional (MCP)</a
+                  >
+                  in order to architect and develop.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-5 service">
+              <div class="col-2"><img src="/images/phonedevelopment.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Mobile Development</h3>
+                <p>
+                  In the world of smart phones it's important that your business has a mobile
+                  presence. When developing a mobile website specific rules must be followed. Screen
+                  size, form controls, and user ability all take on a very different approach.
+                  SunRay Studios understands these differences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-5 service">
+              <div class="col-2"><img src="/images/ecommerceicon.png" alt="" /></div>
+              <div class="col-10">
+                <h3>eCommerce</h3>
+                <p>
+                  Customers have come to expect the ability to purchase products and service online
+                  easily and quickly. We have built many ecommerce solutions. Whether you are
+                  selling hundreds of products or only one we can have you up an running in no time.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row pt-5 service">
+              <div class="col-2"><img src="/images/contentmanagement.png" alt="" /></div>
+              <div class="col-10">
+                <h3>Content Management</h3>
+                <p>
+                  Managing your own content and verbiage usually can save you time and money in the
+                  long run. We have built robust CMS's and smaller ones, that specialized areas that
+                  are updatable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+<div class="row">
+  <div class="whiteline col-12"></div>
+</div>

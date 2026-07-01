@@ -1,0 +1,88 @@
+<div class="row" id="contact-section">
+  <div class="contactbanner-container col-12">
+    <div class="row">
+      <div class="col-2 p-5"><img src="/images/phonelogo.png" alt="" /></div>
+      <div class="col-10 p-5">
+        <h1>Contact SunRay Designs</h1>
+        <p>
+          Getting started is quck and easy. You always speak directly to the person who is assigned
+          to your project and not a sales person. This speeds up communication and development
+          ensuring your project is delivered on time and exceeding your expectations.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-5 ps-5">
+        <form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+            ngModel
+            #usernameInput="ngModel"
+            placeholder="Enter your name..."
+            class="form-control"
+          />
+          @if ((usernameInput.touched || userForm.submitted) && usernameInput.invalid) {
+            <div class="error-message">Name is required.</div>
+          }
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            email
+            ngModel
+            #emailInput="ngModel"
+            placeholder="Enter your email address..."
+            class="form-control"
+          />
+          @if ((emailInput.touched || userForm.submitted) && emailInput.invalid) {
+            <div class="error-message">Email is required.</div>
+          }
+          @if ((emailInput.touched || userForm.submitted) && emailInput.errors?.['email']) {
+            <div class="error-message">Please enter a valid email address.</div>
+          }
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            required
+            ngModel
+            pattern="^[0-9]{10}$"
+            #phoneInput="ngModel"
+            placeholder="Enter your phone number..."
+            class="form-control"
+          />
+          @if ((phoneInput.touched || userForm.submitted) && phoneInput.invalid) {
+            <div class="error-message">Phone number is required.</div>
+          }
+          @if ((phoneInput.touched || userForm.submitted) && phoneInput?.hasError('pattern')) {
+            <div class="error-message">Please enter a valid 10-digit phone number.</div>
+          }
+          <textarea
+            type="text"
+            id="information"
+            name="information"
+            required
+            ngModel
+            #informationInput="ngModel"
+            rows="2"
+            placeholder="Enter your information..."
+            class="form-control"
+          ></textarea>
+          @if ((informationInput.touched || userForm.submitted) && informationInput.invalid) {
+            <div class="error-message">Information is required.</div>
+          }
+          <br />
+          <button type="submit">Send!</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="whiteline col-12"></div>
+</div>

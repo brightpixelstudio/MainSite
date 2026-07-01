@@ -1,0 +1,186 @@
+<div class="row">
+  <div class="samplebanner-container col-12">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="animate__animated animate__rubberBand">Be Unique. Get Noticed.</h1>
+      </div>
+      <div class="col-12">
+        <h4>
+          We are a Design and Marketing Studio specializing in creating unique and distinctive
+          websites.
+        </h4>
+      </div>
+      <div class="col-12" class="gallerydiv">
+        <fslightbox [toggler]="toggler" [sources]="sources" />
+        <button id="GalleryButton" (click)="toggler = !toggler">View Gallery</button>
+      </div>
+    </div>
+
+    <div id="twoImageCarousel" class="carousel slide pt-5" data-bs-ride="carousel">
+      <!-- Slide Position Indicators -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#twoImageCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#twoImageCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#twoImageCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#twoImageCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#twoImageCarousel"
+          data-bs-slide-to="4"
+          aria-label="Slide 5"
+        ></button>
+      </div>
+
+      <!-- Main Slides Wrapper -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center" style="height: 40vh">
+            <a
+              href="/images/ourwork/web/large/33_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/33_Image.jpg" alt="" />
+            </a>
+            <a
+              href="/images/ourwork/web/large/34_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/34_Image.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center" style="height: 40vh">
+            <a
+              href="/images/ourwork/web/large/35_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/35_Image.jpg" alt="" />
+            </a>
+            <a
+              href="/images/ourwork/web/large/36_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/36_Image.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center" style="height: 40vh">
+            <a
+              href="/images/ourwork/web/large/37_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/37_Image.jpg" alt="" />
+            </a>
+            <a
+              href="/images/ourwork/web/large/38_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/38_Image.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center" style="height: 40vh">
+            <a
+              href="/images/ourwork/web/large/39_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/39_Image.jpg" alt="" />
+            </a>
+            <a
+              href="/images/ourwork/web/large/40_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/40_Image.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center" style="height: 40vh">
+            <a
+              href="/images/ourwork/web/large/27_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/27_Image.jpg" alt="" />
+            </a>
+            <a
+              href="/images/ourwork/web/large/28_Image.jpg"
+              data-gallery="example-gallery"
+              style="width: auto !important"
+              target="_blank"
+            >
+              <img class="col-sm-4" src="/images/ourwork/web/28_Image.jpg" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Left Navigation Arrow Control Button -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#twoImageCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="fas fa-chevron-left" style="font-size: 4rem"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <!-- Right Navigation Arrow Control Button -->
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#twoImageCarousel"
+        data-bs-slide="next"
+      >
+        <span class="fas fa-chevron-right" style="font-size: 4rem"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="whiteline col-12"></div>
+</div>
