@@ -37,18 +37,18 @@
 
 @media screen and (max-width: 768px) {
 .servicesbanner-container {
-    height: 950px;
+    height: 990px;
 }
 
 .servicesbanner-container h1 {
     font-size: 22px;
   }
 .servicesbanner-container h3 {
-  font-size: 18px;
+  font-size: 24px;
 }
 .servicesbanner-container .service p {
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 21px;
 }
 .servicesbanner-container .service{
     padding-top:10px;
