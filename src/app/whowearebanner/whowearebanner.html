@@ -8,7 +8,7 @@
         (click)="togglesWhoWeAreContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImageWhoWeAre" alt="" />
+        <img [src]="currentImageWhoWeAre" alt="" class="img-fluid" />
         <h1 [class]="isVisableWhoWeAreContent ? '' : 'disabled'">Who We Are</h1>
       </div>
       <div
@@ -17,7 +17,7 @@
         (click)="toggleCoreValuesContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImageCoreValues" alt="" />
+        <img [src]="currentImageCoreValues" alt="" class="img-fluid" />
         <h1 [class]="isVisableCoreValuesContent ? '' : 'disabled'">Core Values</h1>
       </div>
       <div
@@ -26,7 +26,7 @@
         (click)="toggleOurProcessContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImageOurProcess" alt="" />
+        <img [src]="currentImageOurProcess" alt="" class="img-fluid" />
         <h1 [class]="isVisableOurProcessContent ? '' : 'disabled'">Our Process</h1>
       </div>
       <div class="col-1"></div>
@@ -266,7 +266,12 @@
             <table>
               <tr>
                 <td>
-                  <img src="/images/step1.jpg" title="Step 1 of SunRay Designs" />
+                  <img
+                    src="/images/step1.jpg"
+                    style="min-width: 40px"
+                    class="img-fluid"
+                    title="Step 1 of SunRay Designs"
+                  />
                 </td>
                 <td>
                   <h3>Discovery</h3>
@@ -287,7 +292,12 @@
             <table>
               <tr>
                 <td>
-                  <img src="/images/step2.jpg" title="Step 2 of SunRay Designs" />
+                  <img
+                    src="/images/step2.jpg"
+                    style="min-width: 40px"
+                    class="img-fluid"
+                    title="Step 2 of SunRay Designs"
+                  />
                 </td>
                 <td>
                   <h3>Plan</h3>
@@ -306,7 +316,12 @@
             <table>
               <tr>
                 <td>
-                  <img src="/images/step3.jpg" title="Step 3 of SunRay Designs" />
+                  <img
+                    src="/images/step3.jpg"
+                    style="min-width: 40px"
+                    class="img-fluid"
+                    title="Step 3 of SunRay Designs"
+                  />
                 </td>
                 <td>
                   <h3>Design</h3>
@@ -333,7 +348,12 @@
             <table>
               <tr>
                 <td>
-                  <img src="/images/step4.jpg" title="Step 4 of SunRay Designs" />
+                  <img
+                    src="/images/step4.jpg"
+                    style="min-width: 40px"
+                    class="img-fluid"
+                    title="Step 4 of SunRay Designs"
+                  />
                 </td>
                 <td>
                   <h3>Build</h3>
@@ -354,7 +374,12 @@
             <table>
               <tr>
                 <td>
-                  <img src="/images/step5.jpg" title="Step 5 of SunRay Designs" />
+                  <img
+                    src="/images/step5.jpg"
+                    class="img-fluid"
+                    style="min-width: 40px"
+                    title="Step 5 of SunRay Designs"
+                  />
                 </td>
                 <td>
                   <h3>Launch</h3>

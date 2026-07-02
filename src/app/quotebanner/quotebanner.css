@@ -19,3 +19,15 @@
   color: rgb(150, 150, 150);
   text-transform: initial;
 }
+
+@media screen and (max-width: 768px) {
+.quotebanner-container {
+    height: 320px;
+  }
+  .quotebanner-container h2 {
+    font-size: 24px;
+  }
+.quotebanner-container h3 {
+  font-size: 24px;
+}
+}

@@ -31,3 +31,15 @@
   color: #777777;
   line-height: 24px;
 }
+
+@media screen and (max-width: 768px) {
+.servicesbanner-container h1 {
+    font-size: 22px;
+  }
+.servicesbanner-container h3 {
+  font-size: 20px;
+}
+.servicesbanner-container .service p {
+  font-size: 18px;
+  line-height: 18px;
+}}

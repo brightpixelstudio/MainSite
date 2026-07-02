@@ -20,3 +20,12 @@
   color: rgb(250, 247, 247);
   text-transform: initial;
 }
+
+@media screen and (max-width: 768px) {
+.aboutbanner-container h1 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+.aboutbanner-container h2 {
+  font-size: 18px;
+}}

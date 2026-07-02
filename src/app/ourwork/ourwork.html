@@ -8,7 +8,7 @@
         (click)="toggleWebsiteContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImageWebsite" alt="" />
+        <img [src]="currentImageWebsite" alt="" class="img-fluid" />
         <h1 [class]="isVisableWebsiteContent ? '' : 'disabled'">Websites</h1>
       </div>
       <div
@@ -17,7 +17,7 @@
         (click)="togglePrintContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImagePrint" alt="" />
+        <img [src]="currentImagePrint" alt="" class="img-fluid" />
         <h1 [class]="isVisablePrintContent ? '' : 'disabled'">Print</h1>
       </div>
       <div
@@ -26,7 +26,7 @@
         (click)="toggleMobileContent()"
         style="cursor: pointer"
       >
-        <img [src]="currentImageMobile" alt="" />
+        <img [src]="currentImageMobile" alt="" class="img-fluid" />
         <h1 [class]="isVisableMobileContent ? '' : 'disabled'">Mobile</h1>
       </div>
       <div class="col-1"></div>
