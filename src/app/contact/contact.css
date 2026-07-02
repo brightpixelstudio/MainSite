@@ -1,6 +1,6 @@
 .contactbanner-container {
   width: 100%;
-  height: 850px;
+  height: 950px;
   background-image: url('/images/contactbanner.jpg');
   background-size: cover;
   background-position: center;
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 768px) {
 .contactbanner-container {
-    height: 1050px;
+    height: 1300px;
 }
 .contactbanner-container h1 {
     font-size: 30px;
