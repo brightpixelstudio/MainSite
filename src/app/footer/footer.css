@@ -32,3 +32,17 @@
 .bottommenuphone h3 {
   line-height: 8px;
 }
+
+@media screen and (max-width: 768px) {
+.bottombannerlogo {
+    width: 40%;
+    min-width: 250px;
+    padding: 20px 0px 0px 30px
+  }
+.bottomsocialbuttons {
+    padding: 50px 0px 0px 10px;
+  }
+.bottommenubuttons {
+    padding: 60px 0px 0px 0px;
+  }
+}

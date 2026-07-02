@@ -35,7 +35,15 @@
 }
 
 @media screen and (max-width: 768px) {
-  .topmenubuttons {
-    padding: 50px 0px 0px 0px;
+.topbannerlogo {
+    width: 40%;
+    min-width: 220px;
+    padding: 20px 0px 0px 00px;
+}
+.topsocialbuttons {
+  padding: 80px 0px 0px 10px;
+}
+.topmenubuttons {
+    padding: 30px 0px 0px 0px;
   }
 }
