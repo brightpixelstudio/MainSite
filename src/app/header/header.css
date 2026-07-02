@@ -35,6 +35,9 @@
 }
 
 @media screen and (max-width: 768px) {
+.topbanner-container {
+    height: 300px;
+  }
 .topbannerlogo {
     width: 40%;
     min-width: 220px;
