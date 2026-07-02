@@ -22,12 +22,18 @@
 }
 
 @media screen and (max-width: 768px) {
-.aboutbanner-container h1 {
+.aboutbanner-container {
+    height: 200px;
+  }
+  .aboutbanner-container h1 {
     font-size: 30px;
     padding-bottom: 20px;
   }
 .aboutbanner-container h2 {
   font-size: 18px;
   font-weight:lighter;
+}
+#header-image {
+  display: none;
 }
 }

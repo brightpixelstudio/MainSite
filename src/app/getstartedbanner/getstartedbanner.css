@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 768px) {
 .getstartedbanner-container {
-    height: 640px;
+    height: 450px;
  }
 .getstartedbanner-container h1 {
     font-size: 34px;
@@ -44,5 +44,8 @@
 .getstartedbanner-container p {
   font-size: 20px;
   line-height: 22px;
+}
+#header-image {
+  display: none;
 }
 }
