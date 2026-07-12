@@ -4,32 +4,11 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
 //import { WOW } from 'wowjs';
 import { Header } from './header/header';
-import { Samplebanner } from './samplebanner/samplebanner';
-import { Servicesbanner } from './servicesbanner/servicesbanner';
-import { Quotebanner } from './quotebanner/quotebanner';
-import { Aboutbanner } from './aboutbanner/aboutbanner';
-import { Whowearebanner } from './whowearebanner/whowearebanner';
-import { Getstartedbanner } from './getstartedbanner/getstartedbanner';
-import { Ourwork } from './ourwork/ourwork';
-import { Contact } from './contact/contact';
 import { Footer } from './footer/footer';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    FontAwesomeModule,
-    Header,
-    Samplebanner,
-    Servicesbanner,
-    Quotebanner,
-    Aboutbanner,
-    Whowearebanner,
-    Getstartedbanner,
-    Ourwork,
-    Contact,
-    Footer,
-  ],
+  imports: [RouterOutlet, FontAwesomeModule, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
