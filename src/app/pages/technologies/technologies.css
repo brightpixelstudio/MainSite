@@ -1,0 +1,21 @@
+.technolgies-container h1 {
+  font-size: 35px;
+  padding-top: 10px;
+  color: #0374f5
+}
+
+.technolgies-container h2 {
+  font-size: 50px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.technolgies-container p {
+  font-size: 22px;
+  line-height: 30px;
+  color: #646464
+}
+
+@media screen and (max-width: 768px) {
+}

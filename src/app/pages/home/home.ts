@@ -7,6 +7,7 @@ import { Whowearebanner } from '../../sections/whowearebanner/whowearebanner';
 import { Getstartedbanner } from '../../sections/getstartedbanner/getstartedbanner';
 import { Ourwork } from '../../sections/ourwork/ourwork';
 import { Contact } from '../../sections/contact/contact';
+import { Technologybanner } from '../../sections/technologybanner/technologybanner';
 
 @Component({
   selector: 'home',
@@ -17,6 +18,7 @@ import { Contact } from '../../sections/contact/contact';
     Aboutbanner,
     Whowearebanner,
     Getstartedbanner,
+    Technologybanner,
     Ourwork,
     Contact,
   ],

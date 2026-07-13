@@ -1,0 +1,42 @@
+.technologybanner-container {
+  width: 100%;
+  height: 460px;
+  background-image: url('/images/techbanner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.technologybanner-container h1 {
+  font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-transform: initial;
+    line-height: 36px;
+    font-weight:lighter;
+}
+
+.technologybanner-container p {
+  font-size: 20px;
+  color: rgb(252, 151, 68);
+  text-transform: initial;
+}
+a:hover {
+  color: #ff9e7d
+}
+a {
+  color: #e63b00
+}
+
+@media screen and (max-width: 768px) {
+  .technologybanner-container {
+    height: 1150px;
+  }
+
+  .technologybanner-container h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+    .technologybanner-container .logo {
+      max-width: 100px;
+    }         
+}
