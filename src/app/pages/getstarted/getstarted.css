@@ -1,0 +1,73 @@
+
+.getstarted-container h1 {
+  font-size: 50px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.getstarted-container h2 {
+  font-size: 32px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.getstarted-container h3 {
+  font-size: 24px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.getstarted-container p {
+  font-size: 22px;
+  line-height: 30px;
+  color: #646464
+}
+
+.getstarted-container p.small {
+  font-size: 19px;
+  line-height: 24px;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: #e63b00
+}
+
+input,
+textarea,
+select {
+  min-width: 400px !important;
+  font-family: 'Berylium Rg';
+  padding: 12px !important;
+  margin-bottom: 8px;
+  border-radius: 3px !important;
+  font-size: 22px !important;
+  border: 1px solid #858484 !important;
+}
+input::placeholder,
+textarea::placeholder {
+  color: rgb(187, 187, 187) !important;
+}
+
+.getstarted-container button {
+  font-size: 26px;
+  color: rgb(253, 253, 253);
+  background-color: #000;
+}
+
+.getstarted-container button:hover {
+  background-color: #272727;
+  border: 1px solid #5f5f5f;
+}
+
+.error-message {
+  color: #ff2121;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {}

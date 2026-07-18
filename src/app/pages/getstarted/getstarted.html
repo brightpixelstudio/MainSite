@@ -1,0 +1,241 @@
+<div class="row" id="about-section">
+  <div class="getstarted-container col-12">
+    <div>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+          <div class="row pt-4 ps-4 pb-3">
+            <h1>3 Minutes to Get Started!</h1>
+            <p>
+              We know you're busy so we have streamlined the process to save you time. All we need
+              is a little information and we'll do the rest.<br /><br />
+              This information will allow us to do a quick evaluation of your project. Afterwards,
+              one of our specialists will get back to you to clear up any details.
+              <i>NO sales calls. NO hassles.</i> Just a <strong>FREE estimate</strong> from our
+              experts.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 ps-4">
+          <form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+              ngModel
+              #usernameInput="ngModel"
+              placeholder="Enter your name..."
+              class="form-control"
+            />
+            @if ((usernameInput.touched || userForm.submitted) && usernameInput.invalid) {
+              <div class="error-message">Name is required.</div>
+            }
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              email
+              ngModel
+              #emailInput="ngModel"
+              placeholder="Enter your email address..."
+              class="form-control"
+            />
+            @if ((emailInput.touched || userForm.submitted) && emailInput.invalid) {
+              <div class="error-message">Email is required.</div>
+            }
+            @if ((emailInput.touched || userForm.submitted) && emailInput.errors?.['email']) {
+              <div class="error-message">Please enter a valid email address.</div>
+            }
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              required
+              ngModel
+              pattern="^[0-9]{10}$"
+              #phoneInput="ngModel"
+              placeholder="Enter your phone number..."
+              class="form-control"
+            />
+            @if ((phoneInput.touched || userForm.submitted) && phoneInput.invalid) {
+              <div class="error-message">Phone number is required.</div>
+            }
+            @if ((phoneInput.touched || userForm.submitted) && phoneInput?.hasError('pattern')) {
+              <div class="error-message">Please enter a valid 10-digit phone number.</div>
+            }
+            <h2>About Your Project</h2>
+            <select
+              name="project type"
+              data-name="project type"
+              id="projecttype"
+              name="projecttype"
+              required
+              ngModel
+              #projecttypeSelect="ngModel"
+              style="min-width: 100% !important"
+            >
+              <option selected value="">[ Select Your Project Type ]</option>
+              <option value="total re-design">My site needs a total re-design</option>
+              <option value="need it created">
+                I have a design in mind I just need it created
+              </option>
+              <option value="whole new site developed">I need a brand new website created</option>
+              <option value="other">None eof these. I have something else in mind</option>
+            </select>
+            @if ((projecttypeSelect.touched || userForm.submitted) && projecttypeSelect.invalid) {
+              <div class="error-message">Project Type is required.</div>
+            }
+            <input
+              type="text"
+              id="url"
+              name="url"
+              ngModel
+              #urlInput="ngModel"
+              placeholder="Current URL..."
+              class="form-control"
+            />
+            <select
+              name="project duration"
+              data-name="project duration"
+              id="projectduration"
+              name="projectduration"
+              required
+              ngModel
+              #projectdurationSelect="ngModel"
+              style="min-width: 100% !important"
+            >
+              <option selected value="">[ Select a Project Start Time ]</option>
+              <option value="This week">This Week</option>
+              <option value="3 weeks">Within 2 to 3 Weeks</option>
+              <option value="1 month">Within 1 Month</option>
+              <option value="3 months">Within 2 to 3 Months</option>
+            </select>
+            @if (
+              (projectdurationSelect.touched || userForm.submitted) && projectdurationSelect.invalid
+            ) {
+              <div class="error-message">Project Duration is required.</div>
+            }
+            <select
+              name="project budget"
+              data-name="project budget"
+              id="projectbudget"
+              name="projectbudget"
+              required
+              ngModel
+              #projectbudgetSelect="ngModel"
+              style="min-width: 100% !important"
+            >
+              <option selected value="">[ Select Your Budget ]</option>
+              <option value="$1,500">$400 - $1,500</option>
+              <option value="$2,500">$1,600 - $2,500</option>
+              <option value="$5,000">$2,600 - $5,000</option>
+              <option value="$10,000">$5,100 - $10,000</option>
+              <option value="Over $10,000">More than $10,000</option>
+            </select>
+            @if (
+              (projectbudgetSelect.touched || userForm.submitted) && projectbudgetSelect.invalid
+            ) {
+              <div class="error-message">Project Budget is required.</div>
+            }
+
+            <textarea
+              type="text"
+              id="information"
+              name="information"
+              ngModel
+              #informationInput="ngModel"
+              rows="2"
+              placeholder="Any additional information..."
+              class="form-control"
+            ></textarea>
+            <button class="mt-4" type="submit">Lets Get Started!</button>
+            <br /><br />
+          </form>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <h2>Free Website Features</h2>
+          <p style="padding-bottom: 10px">
+            Everyone likes something for <strong>FREE</strong>. That’s exactly what you get at
+            Bright Pixel Studio.<br /><br />We don’t charge you for options that other companies do.
+            Not only do you get unparalleled service and outstanding satisfaction you also get all
+            of the following benefits for <strong>FREE!</strong>
+          </p>
+          <table>
+            <tr>
+              <td style="vertical-align: top">
+                <img src="../../images/assessment/Consultation.png" title="FREE Consultation" />
+              </td>
+              <td>
+                <h3 class="blue">FREE Consultation</h3>
+                <p class="small">
+                  Estimating how much your project will cost won’t cost you a dime. We don’t charge
+                  for ANY of our meetings and consultations. We believe that a customer should never
+                  be charged in order to express what their vision is.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                <img src="../../images/assessment/Phone.png" title="FREE Phone Support" />
+              </td>
+              <td>
+                <h3 class="blue">FREE Phone Support</h3>
+                <p class="small">
+                  Ensuring that your website will scale correctly on multiple devices is very
+                  important. We use a technique called Responsive Design that will reshape your site
+                  to fit your users device accordingly
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                <img src="../../images/assessment/Seo.png" title="FREE Basic SEO" />
+              </td>
+              <td>
+                <h3 class="blue">FREE Basic SEO</h3>
+                <p class="small">
+                  There is a lot of buzz about SEO - Search Engine Optimization. We build your
+                  website from the start with SEO in mind. We use the latest techniques in order to
+                  help the search engines make your website get noticed.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                <img src="../../images/assessment/Globe.png" title="FREE Search Engine Entry" />
+              </td>
+              <td>
+                <h3 class="blue">FREE Search Engine Entry</h3>
+                <p class="small">
+                  After your project is finished we will submit your website to all major search
+                  engines. This important step will get the word out about your new website and
+                  start driving traffic.
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top">
+                <img
+                  src="../../images/assessment/Camera.png"
+                  title="FREE Case Study at Bright Pixel Studio"
+                />
+              </td>
+              <td>
+                <h3 class="blue">FREE Case Study at SunRay Designs</h3>
+                <p class="small">
+                  We take pride in showing off our work after a project is completed. With your
+                  permission we will post your new website at SunRay Designs with a brief write up
+                  of its success. This free exposure can help boost your sales and drive traffic to
+                  your website.<br /><br />
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
