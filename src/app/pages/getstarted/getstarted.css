@@ -32,10 +32,10 @@
   font-size: 19px;
   line-height: 24px;
 }
-a,
-a:hover {
+a
+{
   text-decoration: none;
-  color: #e63b00
+  color: #962702
 }
 
 input,
