@@ -23,7 +23,7 @@ button:focus {
 }
 ul, ol {
   list-style: none;
-  display: flex;
+  display: inline-block;
 }  
 a, a:hover {
   text-decoration: none;

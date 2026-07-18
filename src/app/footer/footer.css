@@ -21,10 +21,6 @@
   padding: 40px 0px 0px 0px;
 }
 
-.bottommenubutton {
-  padding: 0px 30px 0px 0px;
-}
-
 .bottommenuphone {
   padding: 0px 30px 0px 0px;
 }
@@ -45,4 +41,7 @@
 .bottommenubuttons {
     padding: 60px 0px 0px 0px;
   }
-}
+.bottombanner-container h4 {
+  font-size: 16px;
+  line-height: 20px;
+}}
