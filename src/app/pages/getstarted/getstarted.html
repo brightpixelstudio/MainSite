@@ -78,12 +78,14 @@
               style="min-width: 100% !important"
             >
               <option selected value="">[ Select Your Project Type ]</option>
-              <option value="total re-design">My site needs a total re-design</option>
-              <option value="need it created">
+              <option value="A total re-design">My site needs a total re-design</option>
+              <option value="I have a design in mind I just need it created">
                 I have a design in mind I just need it created
               </option>
-              <option value="whole new site developed">I need a brand new website created</option>
-              <option value="other">None eof these. I have something else in mind</option>
+              <option value="Whole new site developed">I need a brand new website created</option>
+              <option value="I have something else in mind">
+                None of these. I have something else in mind
+              </option>
             </select>
             @if ((projecttypeSelect.touched || userForm.submitted) && projecttypeSelect.invalid) {
               <div class="error-message">Project Type is required.</div>
