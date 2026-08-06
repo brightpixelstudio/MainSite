@@ -10,36 +10,55 @@ export class Whowearebanner {
   isVisableWhoWeAreContent: boolean = true;
   isVisableCoreValuesContent: boolean = false;
   isVisableOurProcessContent: boolean = false;
+  isVisableIndustriesContent: boolean = false;
   currentImageOver: string = 'images/bluebarnov.png';
   currentImageDis: string = 'images/barndis.png';
   currentImageWhoWeAre: string = this.currentImageOver;
   currentImageCoreValues: string = this.currentImageDis;
   currentImageOurProcess: string = this.currentImageDis;
+  currentImageIndustries: string = this.currentImageDis;
 
   togglesWhoWeAreContent() {
     this.isVisableWhoWeAreContent = true;
     this.isVisableCoreValuesContent = false;
     this.isVisableOurProcessContent = false;
+    this.isVisableIndustriesContent = false;
     this.currentImageWhoWeAre = this.currentImageOver;
     this.currentImageCoreValues = this.currentImageDis;
     this.currentImageOurProcess = this.currentImageDis;
+    this.currentImageIndustries = this.currentImageDis;
   }
 
   toggleCoreValuesContent() {
     this.isVisableWhoWeAreContent = false;
     this.isVisableCoreValuesContent = true;
     this.isVisableOurProcessContent = false;
+    this.isVisableIndustriesContent = false;
     this.currentImageWhoWeAre = this.currentImageDis;
     this.currentImageCoreValues = this.currentImageOver;
+    this.currentImageIndustries = this.currentImageDis;
     this.currentImageOurProcess = this.currentImageDis;
   }
 
   toggleOurProcessContent() {
     this.isVisableWhoWeAreContent = false;
     this.isVisableCoreValuesContent = false;
+    this.isVisableIndustriesContent = false;
     this.isVisableOurProcessContent = true;
     this.currentImageWhoWeAre = this.currentImageDis;
     this.currentImageCoreValues = this.currentImageDis;
+    this.currentImageIndustries = this.currentImageDis;
     this.currentImageOurProcess = this.currentImageOver;
+  }
+
+  toggleIndustriesContent() {
+    this.isVisableWhoWeAreContent = false;
+    this.isVisableCoreValuesContent = false;
+    this.isVisableOurProcessContent = false;
+    this.isVisableIndustriesContent = true;
+    this.currentImageWhoWeAre = this.currentImageDis;
+    this.currentImageCoreValues = this.currentImageDis;
+    this.currentImageOurProcess = this.currentImageDis;
+    this.currentImageIndustries = this.currentImageOver;
   }
 }

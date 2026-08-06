@@ -1,7 +1,6 @@
 <div class="row" id="about-section">
   <div class="whoweare-container col-12">
     <div class="row">
-      <div class="col-1"></div>
       <div
         id="WhoWeAreWhoWeAre"
         class="col-3 barn"
@@ -29,7 +28,15 @@
         <img [src]="currentImageOurProcess" alt="" class="img-fluid" />
         <h1 [class]="isVisableOurProcessContent ? '' : 'disabled'">Our Process</h1>
       </div>
-      <div class="col-1"></div>
+      <div
+        id="WhoWeAreIndustries"
+        class="col-3 barn"
+        (click)="toggleIndustriesContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageIndustries" alt="" class="img-fluid" />
+        <h1 [class]="isVisableIndustriesContent ? '' : 'disabled'">Industries</h1>
+      </div>
     </div>
     @if (isVisableWhoWeAreContent) {
       <div id="WhoWeAreWhoWeAreContent" class="whoweares">
@@ -392,6 +399,175 @@
                 </td>
               </tr>
             </table>
+          </div>
+        </div>
+      </div>
+    }
+    @if (isVisableIndustriesContent) {
+      <div class="whoweares" id="WhoWeAreCoreValuesContent">
+        <div class="row">
+          <div class="col-12">
+            <div class="row pt-4 ps-4 corevalues">
+              <h2>Industries We Have Served</h2>
+              <p>
+                SunRay Designs has worked with a large variety of different industries. Below is
+                some of our most recent.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row p-3">
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Financial
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Medical
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Education
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Political
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Retail
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Attorney
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Cooking / Restaurants
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Insurance
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Business
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Sales
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Fitness / Training
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Fashion Wear /
+                  Clothing
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Pet Grooming
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Pet School
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Automotive
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Psychology
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Property Management
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Cleaning Services
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Real Estate / Net
+                  Sheets
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Military
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Automotive
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Night Clubs
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Catering
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Dating
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Stage Speakers
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Yaught / Ship
+                  Restoration
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Festivals
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Photography
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Staffing
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Jewerly
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Solar Panels
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Fishing Charters
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Lead Aquisition
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Print / Logo Services
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Tree Removal
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-12 industrysection">
+              <ul class="fa-ul">
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Authors
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Billiards
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>PEO
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Pawn shops
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Marching Coordination
+                </li>
+                <li>
+                  <span class="fa-li"><i class="fa-solid fa-check"></i></span>Healthcare
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
