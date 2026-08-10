@@ -38,7 +38,7 @@ export class Ourwork {
       number: 2,
       worktypeid: WorkType.Latest,
       name: 'latest',
-      url: 'https://www.intellectualconversation.com//',
+      url: 'https://www.intellectualconversation.com/',
       content:
         'A new group called Intellectual Conversation. No politics or religion, just topics focusing on Art, Philosophy, Psychology, History, Biology, Music, Science, Technology, etc. <br /><br />I welcome everyone who enjoys these topics and others that are similar with insight/debate, but not arguments/judgments.' +
         'We have some awesome users who offer extremely interesting topics that will expand your mind and provide new perspectives. I know it has mine.' +
