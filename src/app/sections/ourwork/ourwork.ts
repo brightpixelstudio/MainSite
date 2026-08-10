@@ -56,36 +56,55 @@ export class Ourwork {
   isVisableWebsiteContent: boolean = true;
   isVisablePrintContent: boolean = false;
   isVisableMobileContent: boolean = false;
+  isVisableLatestContent: boolean = false;
   currentImageOver: string = 'images/bluebarnov.png';
   currentImageDis: string = 'images/barndis.png';
   currentImageWebsite: string = this.currentImageOver;
   currentImagePrint: string = this.currentImageDis;
   currentImageMobile: string = this.currentImageDis;
+  currentImageLatest: string = this.currentImageDis;
 
   toggleWebsiteContent() {
     this.isVisableWebsiteContent = true;
     this.isVisablePrintContent = false;
     this.isVisableMobileContent = false;
+    this.isVisableLatestContent = false;
     this.currentImageWebsite = this.currentImageOver;
     this.currentImagePrint = this.currentImageDis;
     this.currentImageMobile = this.currentImageDis;
+    this.currentImageLatest = this.currentImageDis;
   }
 
   togglePrintContent() {
     this.isVisableWebsiteContent = false;
     this.isVisablePrintContent = true;
     this.isVisableMobileContent = false;
+    this.isVisableLatestContent = false;
     this.currentImageWebsite = this.currentImageDis;
     this.currentImagePrint = this.currentImageOver;
     this.currentImageMobile = this.currentImageDis;
+    this.currentImageLatest = this.currentImageDis;
   }
 
   toggleMobileContent() {
     this.isVisableWebsiteContent = false;
     this.isVisablePrintContent = false;
     this.isVisableMobileContent = true;
+    this.isVisableLatestContent = false;
     this.currentImageWebsite = this.currentImageDis;
     this.currentImagePrint = this.currentImageDis;
     this.currentImageMobile = this.currentImageOver;
+    this.currentImageLatest = this.currentImageDis;
+  }
+
+  toggleLatestContent() {
+    this.isVisableWebsiteContent = false;
+    this.isVisablePrintContent = false;
+    this.isVisableMobileContent = false;
+    this.isVisableLatestContent = true;
+    this.currentImageWebsite = this.currentImageDis;
+    this.currentImagePrint = this.currentImageDis;
+    this.currentImageMobile = this.currentImageDis;
+    this.currentImageLatest = this.currentImageOver;
   }
 }

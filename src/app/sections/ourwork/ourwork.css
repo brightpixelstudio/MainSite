@@ -19,6 +19,27 @@
   padding-top: 40px;
   padding-bottom: 30px;}
 
+#DesignsLatestContent{
+  text-align: left;
+  h3 {
+    font-size: 38px;
+    text-transform:none;
+    }   
+    h4 {
+      font-size: 28px;
+      text-transform: none;
+    }
+    p {
+      font-size: 19px;
+      line-height: 26px;
+      color: #7c7c7c;
+      padding-top: 10px;
+    }
+    a {
+      color: #0374f5
+    }
+  }
+
 #GalleryButton {
   font-family: 'Berylium Rg';
   border: 1px solid #4c86f1;

@@ -1,7 +1,6 @@
 <div class="row" id="work-section">
   <div class="designs-container col-12">
     <div class="row pt-5 ps-4">
-      <div class="col-1"></div>
       <div
         id="DesignsWebsite"
         class="col-3 barn"
@@ -29,7 +28,15 @@
         <img [src]="currentImageMobile" alt="" class="img-fluid" />
         <h1 [class]="isVisableMobileContent ? '' : 'disabled'">Mobile</h1>
       </div>
-      <div class="col-1"></div>
+      <div
+        id="DesignsLatest"
+        class="col-3 barn"
+        (click)="toggleLatestContent()"
+        style="cursor: pointer"
+      >
+        <img [src]="currentImageLatest" alt="" class="img-fluid" />
+        <h1 [class]="isVisableLatestContent ? '' : 'disabled'">Latest</h1>
+      </div>
     </div>
     @if (isVisableWebsiteContent) {
       <div class="col-12" class="gallerydiv">
@@ -709,6 +716,43 @@
               <img src="/images/ourwork/mobile/3_Image.png" class="img-fluid img-thumbnail" />
             </div>
           </div>
+        </div>
+      </div>
+    }
+    @if (isVisableLatestContent) {
+      <div id="DesignsLatestContent" class="designs gallerydiv">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-6">
+            <a href="https://myseminolegardens.com/" target="_blank">
+              <img src="/images/ourwork/latest/1_image.jpg" class="img-fluid img-thumbnail" />
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="https://myseminolegardens.com/" target="_blank">
+              <h3>Seminole Gardens</h3>
+            </a>
+            <p>
+              Nestled around two flowing fresh water lakes and tropical gardens is the fabulous
+              Seminole Garden Apartment Community. Located midway between St. Petersburg and
+              Clearwater, Florida, it is convenient to all tourist attractions and the cultural
+              centers of St. Petersburg, Sarasota, Tampa, and Clearwater. Ideally located in the
+              heart of Seminole, SGA is convenient to the Gulf Beaches and the St. Petersburg and
+              Tampa Airports.
+              <br /><br />
+              Seminole Gardens, is a senior oriented 55+ community. At SGA you will enjoy nice,
+              quiet, elegant living and a great social life. As an owner or renter at SGA, you will
+              experience a feeling of spaciousness and freedom – from the beautiful landscaped lawn
+              to the spacious balconies. Good taste reflects throughout this entire development to
+              produce a home already proven to be a wonderful place to live. See and know for
+              yourself, how this beautiful 53 acre development is designed for the mature adult to
+              enjoy a carefree life. Our residents enjoy delightful year-round living!
+            </p>
+            <h4>
+              <a href="https://myseminolegardens.com/" target="_blank"> Visit Seminole Gardens </a>
+            </h4>
+          </div>
+          <div class="col-1"></div>
         </div>
       </div>
     }
