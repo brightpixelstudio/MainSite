@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FsLightbox } from 'fslightbox-angular';
+import { Work } from '../../models/work';
+import { WorkType } from '../../enums/worktypes';
 
 @Component({
   selector: 'ourwork',
@@ -9,6 +11,42 @@ import { FsLightbox } from 'fslightbox-angular';
 })
 export class Ourwork {
   // Controller variables
+  myHtmlContent: string = '';
+  currentClient: number = 0;
+  prevImage: string = 'prevdisbtn.jpg';
+  nextImage: string = 'nextbtn.jpg';
+  latestWork: Work[] = [
+    {
+      workid: 1,
+      number: 1,
+      worktypeid: WorkType.Latest,
+      name: 'latest',
+      url: 'https://myseminolegardens.com/',
+      content:
+        'Nestled around two flowing fresh water lakes and tropical gardens is the fabulous Seminole Garden Apartment Community. Located midway between St. Petersburg and' +
+        'Clearwater, Florida, it is convenient to all tourist attractions and the cultural centers of St. Petersburg, Sarasota, Tampa, and Clearwater. Ideally located in the' +
+        'heart of Seminole, SGA is convenient to the Gulf Beaches and the St. Petersburg and Tampa Airports.' +
+        '<br /><br />' +
+        'Seminole Gardens, is a senior oriented 55 plus community. At SGA you will enjoy nice, quiet, elegant living and a great social life. As an owner or renter at SGA, you will' +
+        'experience a feeling of spaciousness and freedom - from the beautiful landscaped lawn to the spacious balconies. Good taste reflects throughout this entire development to' +
+        'produce a home already proven to be a wonderful place to live. See and know for yourself, how this beautiful 53 acre development is designed for the mature adult to' +
+        'enjoy a carefree life. Our residents enjoy delightful year-round living!',
+      title: 'Seminole Gardens',
+    },
+    {
+      workid: 2,
+      number: 2,
+      worktypeid: WorkType.Latest,
+      name: 'latest',
+      url: 'https://www.intellectualconversation.com//',
+      content:
+        'A new group called Intellectual Conversation. No politics or religion, just topics focusing on Art, Philosophy, Psychology, History, Biology, Music, Science, Technology, etc. <br /><br />I welcome everyone who enjoys these topics and others that are similar with insight/debate, but not arguments/judgments.' +
+        'We have some awesome users who offer extremely interesting topics that will expand your mind and provide new perspectives. I know it has mine.' +
+        '<br/><br/>We are local and located in Greenville/Simpsonville area. We meet in person about every 6 months to shake hands and connect with new people',
+      title: 'Intellectual Conversation',
+    },
+  ];
+
   toggler = false;
   sources = [
     '/images/ourwork/web/large/33_Image.jpg',
@@ -63,6 +101,26 @@ export class Ourwork {
   currentImagePrint: string = this.currentImageDis;
   currentImageMobile: string = this.currentImageDis;
   currentImageLatest: string = this.currentImageDis;
+
+  constructor() {
+    this.myHtmlContent = this.latestWork[0]?.content ?? '';
+  }
+
+  prevClient() {
+    this.currentClient = Math.max(0, this.currentClient - 1);
+    this.myHtmlContent = this.latestWork[this.currentClient]?.content ?? '';
+    this.nextImage =
+      this.currentClient < this.latestWork.length - 1 ? 'nextbtn.jpg' : 'nextdisbtn.jpg';
+    this.prevImage = this.currentClient > 0 ? 'prevbtn.jpg' : 'prevdisbtn.jpg';
+  }
+
+  nextClient() {
+    this.currentClient = Math.min(this.latestWork.length - 1, this.currentClient + 1);
+    this.myHtmlContent = this.latestWork[this.currentClient]?.content ?? '';
+    this.nextImage =
+      this.currentClient < this.latestWork.length - 1 ? 'nextbtn.jpg' : 'nextdisbtn.jpg';
+    this.prevImage = this.currentClient > 0 ? 'prevbtn.jpg' : 'prevdisbtn.jpg';
+  }
 
   toggleWebsiteContent() {
     this.isVisableWebsiteContent = true;

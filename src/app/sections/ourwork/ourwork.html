@@ -724,35 +724,38 @@
         <div class="row">
           <div class="col-1"></div>
           <div class="col-6">
-            <a href="https://myseminolegardens.com/" target="_blank">
-              <img src="/images/ourwork/latest/1_image.jpg" class="img-fluid img-thumbnail" />
+            <a href="{{ latestWork[currentClient].url }}" target="_blank">
+              <img
+                src="/images/ourwork/latest/{{ latestWork[currentClient].number }}_image.jpg"
+                class="img-fluid img-thumbnail"
+              />
             </a>
           </div>
-          <div class="col-4">
-            <a href="https://myseminolegardens.com/" target="_blank">
-              <h3>Seminole Gardens</h3>
+          <div class="col-3">
+            <a href="{{ latestWork[currentClient].url }}" target="_blank">
+              <h3>{{ latestWork[currentClient].title }}</h3>
             </a>
             <p>
-              Nestled around two flowing fresh water lakes and tropical gardens is the fabulous
-              Seminole Garden Apartment Community. Located midway between St. Petersburg and
-              Clearwater, Florida, it is convenient to all tourist attractions and the cultural
-              centers of St. Petersburg, Sarasota, Tampa, and Clearwater. Ideally located in the
-              heart of Seminole, SGA is convenient to the Gulf Beaches and the St. Petersburg and
-              Tampa Airports.
-              <br /><br />
-              Seminole Gardens, is a senior oriented 55+ community. At SGA you will enjoy nice,
-              quiet, elegant living and a great social life. As an owner or renter at SGA, you will
-              experience a feeling of spaciousness and freedom – from the beautiful landscaped lawn
-              to the spacious balconies. Good taste reflects throughout this entire development to
-              produce a home already proven to be a wonderful place to live. See and know for
-              yourself, how this beautiful 53 acre development is designed for the mature adult to
-              enjoy a carefree life. Our residents enjoy delightful year-round living!
+              <span [innerHTML]="myHtmlContent"></span>
             </p>
             <h4>
-              <a href="https://myseminolegardens.com/" target="_blank"> Visit Seminole Gardens </a>
+              <a href="{{ latestWork[currentClient].url }}" target="_blank">
+                Visit {{ latestWork[currentClient].title }}
+              </a>
             </h4>
           </div>
-          <div class="col-1"></div>
+          <div class="col-2">
+            <img
+              (click)="prevClient()"
+              src="/images/{{ prevImage }}"
+              class="navbtn img-fluid pe-2"
+            />
+            <img
+              (click)="nextClient()"
+              src="/images/{{ nextImage }}"
+              class="navbtn img-fluid pe-2"
+            />
+          </div>
         </div>
       </div>
     }
