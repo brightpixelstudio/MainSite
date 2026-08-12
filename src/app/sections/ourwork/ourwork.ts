@@ -45,6 +45,18 @@ export class Ourwork {
         '<br/><br/>We are local and located in Greenville/Simpsonville area. We meet in person about every 6 months to shake hands and connect with new people',
       title: 'Intellectual Conversation',
     },
+    {
+      workid: 3,
+      number: 3,
+      worktypeid: WorkType.Latest,
+      name: 'latest',
+      url: 'http://robertstevenson.sunraydesigns.org/',
+      content:
+        'With over 30 years of extensive corporate and entrepreneurial experience, Robert Stevenson understands what it takes to succeed. He teaches companies how to deal with risk, competition, and the ever-changing business environment.<br/><br/>' +
+        'Robert helps prepare companies for the 21st century. With a powerful blend of experience, research, case studies and competitor perspectives, Robert’s original insights help organizations, business leaders and associates understand how to unleash their future potential.<br/><br/>' +
+        'Energy, power, content, and tangible solutions are all considerations in picking a speaker, but what determines whether a speaker hits a home run with your audience is much more than just those components.',
+      title: 'Robert Stevenson',
+    },
   ];
 
   toggler = false;
