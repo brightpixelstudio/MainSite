@@ -57,6 +57,19 @@ export class Ourwork {
         'Energy, power, content, and tangible solutions are all considerations in picking a speaker, but what determines whether a speaker hits a home run with your audience is much more than just those components.',
       title: 'Robert Stevenson',
     },
+    {
+      workid: 4,
+      number: 4,
+      worktypeid: WorkType.Latest,
+      name: 'latest',
+      url: 'http://leafsolutions.sunraydesigns.org/',
+      content:
+        'Founded in 2001, Leaf Solution is a family-run company that started in the gutter business and then pioneered gutter guards.<br/><br/>' +
+        'Experienced in virtually every variety of gutter guard, Leaf Solutions evolution has resulted in 2 proven types - mesh and perforated - for every application and budget.<br/><br/>' +
+        'These American-made products are manufactured to such high-quality standards, they are backed with an exclusive 20-year warranty.<br/><br/>' +
+        'We strive to lead in the invention, development and manufacture of the industrys most advanced gutter solutions. Leaf Solution was founded in 2002 by Evelyn Robins (after owning the largest gutter company on the east coast for over 20 years). During that time, Evelyn never found a quality gutter cover solution that "worked", so she set out to invent her own and create a manufacturing company to meet that need.',
+      title: 'Leaf Solutions',
+    },
   ];
 
   toggler = false;
