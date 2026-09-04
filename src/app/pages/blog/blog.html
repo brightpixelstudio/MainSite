@@ -1,1 +1,191 @@
-<p>blog works!</p>
+<div class="row" id="blog-section">
+  <div class="blog-container col-12">
+    <div class="row">
+      <div class="col-lg-1 col-sm-1"></div>
+      <div class="col-lg-10 col-sm-10">
+        <div class="row pt-4">
+          <h1>SunRay Designs Blog</h1>
+          <p>
+            Keeping up with the latest in design and development can be exhausting. Changes in
+            technology move at the speed of light. Our blog speaks to the latest trends and explains
+            them in an <strong>easy-to-understand manner.</strong>
+          </p>
+        </div>
+        <div class="col-lg-1 col-sm-1"></div>
+      </div>
+    </div>
+    <div class="row pb-4">
+      <div class="col-lg-1 col-sm-1"></div>
+      <div class="col-lg-10 col-sm-10 controls ps-4">
+        <div class="row">
+          <table class="table table-sm">
+            <tr>
+              <td class="fit-content"><h5>Category:</h5></td>
+              <td class="fit-content pe-4">
+                <select
+                  [ngModel]="blogtypeid"
+                  (ngModelChange)="onCatagorySelect($event)"
+                  id="blogtypeid"
+                  name="blogtypeid"
+                >
+                  @for (type of getBlogInformation.getallblogtypes; track type.blogtypeid) {
+                    <option value="{{ type.blogtypeid }}">{{ type.category }}</option>
+                  }
+                </select>
+              </td>
+
+              <td class="fit-content"><h5>Year:</h5></td>
+              <td>
+                <select
+                  [ngModel]="year"
+                  name="year"
+                  data-name="year"
+                  id="year"
+                  (ngModelChange)="onYearSelect($event)"
+                >
+                  @for (year of getBlogInformation.getallblogpostyears; track year.uniqueYear) {
+                    <option value="{{ year.uniqueYear }}">{{ year.uniqueYear }}</option>
+                  }
+                </select>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-lg-1 col-sm-1"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-1 col-sm-1"></div>
+      <div class="col-lg-7 col-sm-7">
+        @if (isContentLoaded) {
+          @for (post of getBlogInformation.postsbasedontypeandyear; track post.blogpostid) {
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <h2 style="padding: 0px">{{ post.title }}</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <table class="table table-sm">
+                  <tr>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/calender.png" />{{
+                        post.dateposted | date: 'mediumDate'
+                      }}
+                    </td>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/tag.png" />{{ post.category }}
+                    </td>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/person.png" />{{ post.author }}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-sm-8">
+                <img
+                  class="img-fluid img-thumbnail"
+                  src="../../images/blog/post{{ post.blogpostid }}.jpg"
+                />
+              </div>
+              <div class="col-lg-4 col-sm-4">
+                <p class="summary">{{ post.summary }}</p>
+                <br />
+                <a [routerLink]="['/blog', post.url]"><button>Learn More</button></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-sm-12 pt-4 pb-4"><hr /></div>
+            </div>
+          }
+        }
+        @if (this.noContent) {
+          <div class="row">
+            <div class="col-lg-6 col-sm-6">
+              <img class="img-fluid img-thumbnail" src="../../images/blog/crying.jpg" />
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <p class="summary">
+                Unfortunately there are no posts for the Catagory and Year you have selected.
+              </p>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="col-lg-3 col-sm-3 ps-5">
+        <h2>Lastest Posts</h2>
+        @for (post of getBlogInformation.getlatestblogposts; track post.blogpostid) {
+          <div class="row">
+            <div class="col-lg-5 col-sm-5">
+              <a [routerLink]="['/blog', post.url]">
+                <img
+                  class="img-fluid img-thumbnail"
+                  src="../../images/blog/post{{ post.blogpostid }}.jpg"
+                />
+              </a>
+            </div>
+            <div class="col-lg-7 col-sm-7">
+              <h5 class="latest">
+                <a [routerLink]="['/blog', post.url]">{{ post.title }}</a>
+              </h5>
+              <p class="latest">
+                {{ post.summary }}
+              </p>
+              <p class="latest">
+                <strong>{{ post.dateposted | date: 'mediumDate' }}</strong>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-sm-12 pt-3 pb-3"></div>
+          </div>
+        }
+        <div class="row">
+          <div class="col-lg-12 col-sm-12"><hr /></div>
+        </div>
+        <h2>Categories for {{ year }}</h2>
+        @for (post of getBlogInformation.getallpostscountbyyearbycategory; track post.category) {
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              <h5 class="latest">
+                <a
+                  href="https://testing.com"
+                  (click)="onCategoryLinkClick($event, post.blogtypeid)"
+                >
+                  <img class="pe-2" src="../../images/blog/tag.png" />{{ post.category }} ({{
+                    post.count
+                  }})</a
+                >
+              </h5>
+            </div>
+          </div>
+        }
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 pt-3">
+            <a routerLink="/getstarted" routerLinkActive="active-link">
+              <img class="pe-2" src="../../images/blog/getstarted.jpg" />
+            </a>
+          </div>
+        </div>
+        <h2>Archive for {{ year }}</h2>
+        @for (post of getBlogInformation.getallpostscountbyyearbymonth; track post.month) {
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              <h5 class="latest">
+                <a href="https://testing.com" (click)="onArchiveLinkClick($event, post.month)">
+                  <img class="pe-2" src="../../images/blog/calender.png" />{{ post.monthname }} ({{
+                    post.count
+                  }})</a
+                >
+              </h5>
+            </div>
+          </div>
+        }
+        <div class="row pb-5"></div>
+      </div>
+    </div>
+  </div>
+</div>

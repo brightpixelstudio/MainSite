@@ -1,0 +1,85 @@
+.blog-container a {
+  color: #e63b00
+}
+
+.blog-container h1 {
+  font-size: 50px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.blog-container h2 {
+  font-size: 32px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.blog-container h3,
+h5 {
+  font-size: 24px;
+  text-transform: initial;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.blog-container h5 {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: transparent;
+}
+
+.blog-container p {
+  font-size: 22px;
+  line-height: 30px;
+  color: #646464
+}
+
+.blog-container p.summary {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 10px;
+}
+
+.blog-container p.latest {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-container .controls {
+  padding-top: 14px;
+  background-color: rgb(235, 235, 235);
+  border: 1px solid #858484;
+}
+
+table {
+  width: fit-content;
+}
+
+.fit-content {
+  width: 1%;
+  white-space: nowrap;
+}
+
+select {
+  min-width: 230px;
+  font-family: 'Berylium Rg';
+  border-radius: 3px;
+  font-size: 22px;
+  border: 1px solid #858484;
+}
+
+button {
+  font-family: 'Berylium Rg';
+  border-radius: 3px;
+  font-size: 22px;
+  border: 1px solid #858484;
+}
+
+button:hover {
+  background-color: rgb(255, 213, 122);
+}

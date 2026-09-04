@@ -102,8 +102,112 @@ export class Blog {
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
       },
+      {
+        blogpostid: 2,
+        title: 'Web Design and Fonts',
+        content:
+          'Choosing the right fonts for your web design shapes your sites personality and readability. Top choices include clean sans-serifs like Inter for digital clarity and elegant serifs like Playfair Display for striking headlines. Balance aesthetics with performance to ensure fast-loading, accessible text across every device.<br/><br/>' +
+          'Why Web Typography Matters<br/><br/>' +
+          'First impressions: Fonts speak for your brand before visitors read a single word.<br/>' +
+          'Readability: Clean layouts keep users on your page longer.<br/>' +
+          'Hierarchy: Distinct sizes guide the eye through your content smoothly.<br/>' +
+          'Top Font Categories & PicksSans-Serif (Modern & Clean): Inter, Montserrat, and Poppins offer crisp screen legibility.Serif (Classic & Elegant): Playfair Display and Lora bring sophistication to headers and editorial blogs.<br/>' +
+          'Variable Fonts: Adapt seamlessly to different screen dimensions and resolutions. <br/>' +
+          'Essential Best Practices.  Limit your site to two or three typefaces maximum. Pair a decorative header font with a simple body font. Maintain high contrast between text and background colors. Prioritize responsive scaling for mobile and desktop screens. Explore expert curation on the I love Typography Blog. Check out modern options with the Figma Sans Serif Guide.<br/><br/>' +
+          'Review stylistic trends on the Webflow Typography Blog.',
+        summary:
+          'Choosing the right fonts for your web design shapes your sites personality and readability. Top choices include clean sans-serifs like Inter for digital clarity and elegant serifs like Playfair Display for striking headlines. Balance aesthetics with performance to ensure fast-loading, accessible text across every device.<br/><br/>',
+        url: 'web-design-and-fonts',
+        dateposted: new Date('2026-07-28'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Design}`,
+      },
+      {
+        blogpostid: 3,
+        title: 'Blog Post 3',
+        content:
+          'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
+          'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
+          'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        summary:
+          'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+        url: 'blog-post-3',
+        dateposted: new Date('2026-07-22'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Development}`,
+      },
+      {
+        blogpostid: 4,
+        title: 'Wireframing',
+        content:
+          'Web design has many different aspects to it.  From the intitial concept, to story telling, to layout, to wireframing, to graphic design, to front end development.  They all play a critical part to ensure the final product is what the customer had in mind.<br/><br/>' +
+          'Focusing on the wireframe process, it is a simple, structural blueprint that outlines the layout, content hierarchy, and functionality of a webpage before any colors, fonts, or images are added.<br/><br/>' +
+          'Here are some of the key components of wireframing. ' +
+          '<li>' +
+          '<ul>Navigation: Maps out menus, search bars, links, and breadcrumbs to guide user flow.</ul>' +
+          '<ul>Layout Structure: Defines grids, margins, spacing, and overall content positioning.</ul>' +
+          '<ul>Call-to-Action (CTA): Marks the exact placement for primary and secondary conversion buttons.</ul>' +
+          '<ul>Content Placeholders: Uses basic boxes, lines, and dummy text to represent headers, paragraphs, and media.</ul>' +
+          '<ul>Annotations: Provides brief notes explaining user interactions or developer instructions.</ul>' +
+          '</li>' +
+          'What are some of the benefits of wireframing.' +
+          '<li>' +
+          '<ul>Early Feedback: Catches structural flaws or navigation issues before expensive coding begins.</ul>' +
+          '<ul>Saves Time: Streamlines the transition from concept to high-fidelity mockups using platforms like Figma or Balsamiq.</ul>' +
+          '<ul>Clarity of Vision: Focuses teams and clients strictly on usability and layout rather than superficial design.</ul>' +
+          '</li>',
+        summary:
+          'Web design has many different aspects to it.  From the intitial concept, to story telling, to layout, to wireframing, to graphic design, to front end development.  They all play a critical part to ensure the final product is what the customer had in mind.',
+        url: 'web-design-wireframing',
+        dateposted: new Date('2026-07-20'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Design}`,
+      },
+      {
+        blogpostid: 5,
+        title: 'Blog Post 5',
+        content:
+          'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
+          'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
+          'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        summary:
+          'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+        url: 'blog-post-5',
+        dateposted: new Date('2026-08-20'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Design}`,
+      },
+      {
+        blogpostid: 6,
+        title: 'Blog Post 6',
+        content:
+          'Blog Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
+          'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
+          'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        summary:
+          'Blog Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+        url: 'blog-post-6',
+        dateposted: new Date('2026-06-20'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Design}`,
+      },
+      {
+        blogpostid: 7,
+        title: 'Blog Post 7',
+        content:
+          'Blog Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
+          'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
+          'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        summary:
+          'Blog Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+        url: 'blog-post-7',
+        dateposted: new Date('2026-06-04'),
+        author: 'Brett Mitchell',
+        category: `${BlogType.Development}`,
+      },
     ];
 
     // call the load post function
+    console.log(this.allBlogPostList);
   }
 }
