@@ -80,7 +80,7 @@ export class Ourwork {
         'The Poker Night Sign-up website was created from scratch and deployed in less than 5 hours.  It allowed an easy way for interested individuals to sign-up for a poker get together. <br/><br/>' +
         'It involved:' +
         '<ul><li>Wireframing (Balsamiq)</li><li>Graphic Design (Photoshop)</li><li>Cutting up the design</li><li>Layout using Bootstrap, CSS, and media queries for a mobile-friendly design</li><li>Creating a new project and developing in Angular, adding new fonts from Google Fonts</li><li>Setting up the project in GitHub</li><li>Setting up a new Static Website in Azure, ensuring GitHub and Azure talk nicely to each other. </li><li>Creating a new Subdomain in IONOS and associating it with the Azure-created URL  </li></ul>',
-      title: 'Poker Night Sign-up',
+      title: 'Poker Night',
     },
   ];
 
