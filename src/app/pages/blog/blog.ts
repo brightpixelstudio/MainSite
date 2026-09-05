@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { forkJoin } from 'rxjs';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BlogType } from '../../enums/blogtype';
@@ -8,6 +9,9 @@ import { GetAllBlogTypes } from '../../models/getallblogtypes';
 import { GetAllBlogPostYears } from '../../models/getallblogpostyears';
 import { GetBlogPostsBasedOnTypeAndYear } from '../../models/getblogpostsbasedontypeandyear';
 import { GetLatestBlogPosts } from '../../models/getlatestblogposts';
+import { GetAllPostsCountByYearByCategory } from '../../models/getallpostscountbyyearbycategory';
+import { GetAllPostsCountByYearByMonth } from '../../models/getallpostscountbyyearbymonth';
+
 import { truncateString } from '../../utils/utils';
 
 @Component({
@@ -23,10 +27,13 @@ export class Blog {
   isContentLoaded: boolean = false;
   noContent: boolean = true;
   blogpostid: number = 5;
+  getBlogInformation: any[] = [];
   allBlogPostList: GetAllBlogPosts[] = [];
-  getallblogtypes: GetAllBlogTypes[] = [];
-  getallblogpostyears: GetAllBlogPostYears[] = [];
+  getAllBlogTypes: GetAllBlogTypes[] = [];
+  getAllBlogPostYears: GetAllBlogPostYears[] = [];
   getBlogPostsBasedOnTypeAndYear: GetBlogPostsBasedOnTypeAndYear[] = [];
+  getAllPostsCountByYearByCategory: GetAllPostsCountByYearByCategory[] = [];
+  getAllPostsCountByYearByMonth: GetAllPostsCountByYearByMonth[] = [];
   getLatestBlogPosts: GetLatestBlogPosts[] = [];
 
   constructor(private cdr: ChangeDetectorRef) {}
@@ -36,6 +43,8 @@ export class Blog {
     this.loadAllBlogPostYears();
     this.loadAllBlogTypes();
     this.loadPosts();
+
+    console.log(this.getBlogInformation);
   }
 
   onCatagorySelect(selectedValue: any): void {
@@ -116,7 +125,7 @@ export class Blog {
           'Essential Best Practices.  Limit your site to two or three typefaces maximum. Pair a decorative header font with a simple body font. Maintain high contrast between text and background colors. Prioritize responsive scaling for mobile and desktop screens. Explore expert curation on the I love Typography Blog. Check out modern options with the Figma Sans Serif Guide.<br/><br/>' +
           'Review stylistic trends on the Webflow Typography Blog.',
         summary:
-          'Choosing the right fonts for your web design shapes your sites personality and readability. Top choices include clean sans-serifs like Inter for digital clarity and elegant serifs like Playfair Display for striking headlines. Balance aesthetics with performance to ensure fast-loading, accessible text across every device.<br/><br/>',
+          'Choosing the right fonts for your web design shapes your sites personality and readability. Top choices include clean sans-serifs like Inter for digital clarity and elegant serifs like Playfair Display for striking headlines. Balance aesthetics with performance to ensure fast-loading, accessible text across every device.',
         url: 'web-design-and-fonts',
         dateposted: new Date('2026-07-28'),
         author: 'Brett Mitchell',
@@ -131,7 +140,7 @@ export class Blog {
           'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
           'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
         summary:
-          'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+          'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
         url: 'blog-post-3',
         dateposted: new Date('2026-07-22'),
         author: 'Brett Mitchell',
@@ -174,7 +183,7 @@ export class Blog {
           'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
           'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
         summary:
-          'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+          'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
         url: 'blog-post-5',
         dateposted: new Date('2026-08-21'),
         author: 'Brett Mitchell',
@@ -189,7 +198,7 @@ export class Blog {
           'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
           'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
         summary:
-          'Blog Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+          'Blog Post 6 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
         url: 'blog-post-6',
         dateposted: new Date('2026-06-20'),
         author: 'Brett Mitchell',
@@ -204,7 +213,7 @@ export class Blog {
           'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
           'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
         summary:
-          'Blog Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
+          'Blog Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
         url: 'blog-post-7',
         dateposted: new Date('2025-06-04'),
         author: 'Brett Mitchell',
@@ -215,38 +224,22 @@ export class Blog {
     console.log('allBlogPostList', this.allBlogPostList);
   }
 
-  loadAllBlogPostYears() {
+  private loadAllBlogPostYears() {
     // get all blog post years (Change to API call later)
     const unique = [...new Set(this.allBlogPostList.map((item) => item.dateposted.getFullYear()))];
-    this.getallblogpostyears = unique.map((year) => ({ uniqueyear: year }));
-    console.log('getallblogpostyears', this.getallblogpostyears);
+    this.getAllBlogPostYears = unique.map((year) => ({ uniqueyear: year }));
   }
 
-  loadAllBlogTypes() {
+  private loadAllBlogTypes() {
     // get all blog post years (Change to API call later)
     const unique = [
       ...new Map(this.allBlogPostList.map((item) => [item.blogtypeid, item])).values(),
     ];
 
-    this.getallblogtypes = unique.map((item) => ({
+    this.getAllBlogTypes = unique.map((item) => ({
       blogtypeid: item.blogtypeid,
       category: item.category,
     }));
-    console.log('getallblogtypes', this.getallblogtypes);
-  }
-
-  filterBlogPostsBasedOnTypeAndYear(
-    allPosts: GetAllBlogPosts[],
-    year: number,
-    blogtypeid: number | undefined,
-    month: number | undefined,
-  ): GetAllBlogPosts[] {
-    return allPosts.filter(
-      (post) =>
-        post.dateposted.getFullYear() === year &&
-        (blogtypeid === undefined || post.blogtypeid === blogtypeid) &&
-        (month === undefined || post.dateposted.getMonth() === month),
-    );
   }
 
   private loadPosts(): void {
@@ -261,21 +254,50 @@ export class Blog {
       this.blogtypeid,
       this.month,
     );
-    console.log('getBlogPostsBasedOnTypeAndYear', this.getBlogPostsBasedOnTypeAndYear);
 
     // get the latest blog posts
-    this.getLatestBlogPosts = [...this.allBlogPostList]
+    const posts = [...this.allBlogPostList]
       .sort((a, b) => b.dateposted.getTime() - a.dateposted.getTime())
       .slice(0, 4);
+    const cloned = JSON.parse(JSON.stringify(posts));
 
     // shorten the summary if needed
-    for (const post of this.getLatestBlogPosts) {
+    for (const post of cloned) {
       post.summary = truncateString(post.summary, 110);
     }
-    console.log('getLatestBlogPosts', this.getLatestBlogPosts);
+    this.getLatestBlogPosts = posts;
 
     // get the count of posts per year and category
-    //const getallpostscountbyyearbycategory;
+    this.getAllPostsCountByYearByCategory = this.getPostCountByYearByCategory(
+      this.allBlogPostList,
+      this.year,
+    );
+
+    // get the count of posts per year and month
+    // this.getAllPostsCountByYearByMonth
+    this.getAllPostsCountByYearByMonth = this.getPostCountByYearByMonth(
+      this.allBlogPostList,
+      this.year,
+    );
+
+    // CLEAR MAIN ARRAY and ADD NEW DATA
+    // add object arrays to main object array
+    this.getBlogInformation = [];
+    this.getBlogInformation.push({ name: 'getallblogtypes', data: this.getAllBlogTypes });
+    this.getBlogInformation.push({ name: 'getallblogpostyears', data: this.getAllBlogPostYears });
+    this.getBlogInformation.push({
+      name: 'getBlogPostsBasedOnTypeAndYear',
+      data: this.getBlogPostsBasedOnTypeAndYear,
+    });
+    this.getBlogInformation.push({ name: 'getlatestblogposts', data: this.getLatestBlogPosts });
+    this.getBlogInformation.push({
+      name: 'getallpostscountbyyearbycategory',
+      data: this.getAllPostsCountByYearByCategory,
+    });
+    this.getBlogInformation.push({
+      name: 'getallpostscountbyyearbymonth',
+      data: this.getAllPostsCountByYearByMonth,
+    });
 
     // content is loaded, so set the flag to true and detect changes
     this.isContentLoaded = true;
@@ -294,5 +316,80 @@ export class Blog {
 
       },
     */
+  }
+
+  // helper functions
+  private filterBlogPostsBasedOnTypeAndYear(
+    allPosts: GetAllBlogPosts[],
+    year: number,
+    blogtypeid: number | undefined,
+    month: number | undefined,
+  ): GetAllBlogPosts[] {
+    return allPosts.filter(
+      (post) =>
+        post.dateposted.getFullYear() === year &&
+        (blogtypeid === undefined || post.blogtypeid === blogtypeid) &&
+        (month === undefined || post.dateposted.getMonth() === month),
+    );
+  }
+
+  private getPostCountByYearByMonth(allPosts: GetAllBlogPosts[], year: number) {
+    // get posts by year
+    const posts = allPosts.filter((post) => post.dateposted.getFullYear() === year);
+
+    // get specfic field only the fields we need for the count
+    const reducedPosts = posts.map((item) => ({
+      dateposted: item.dateposted,
+    }));
+
+    // get the month and year
+    const monthYearPosts = reducedPosts.map((item) => ({
+      ...item,
+      year: item.dateposted.getFullYear(),
+      month: item.dateposted.getMonth(),
+      fullMonthName: item.dateposted.toLocaleString('default', { month: 'long' }),
+    }));
+
+    // group by counts
+    const groupByList = reducedPosts.reduce<GetAllPostsCountByYearByMonth[]>((acc, item) => {
+      const post = acc.find((count) => count.month === item.dateposted.getMonth());
+      if (post) {
+        post.count += 1;
+      } else {
+        acc.push({
+          monthname: item.dateposted.toLocaleString('default', { month: 'long' }),
+          year: item.dateposted.getFullYear(),
+          month: item.dateposted.getMonth(),
+          count: 1,
+        });
+      }
+      return acc;
+    }, []);
+
+    // order the list by month
+    return [...groupByList].sort((a, b) => a.month - b.month);
+  }
+
+  private getPostCountByYearByCategory(allPosts: GetAllBlogPosts[], year: number) {
+    // get posts by year
+    const posts = allPosts.filter((post) => post.dateposted.getFullYear() === year);
+
+    // get specfic field only the fields we need for the count
+    const reducedPosts = posts.map((item) => ({
+      dateposted: item.dateposted,
+      blogtypeid: item.blogtypeid,
+      category: item.category,
+    }));
+
+    // group by counts
+    return reducedPosts.reduce<GetAllPostsCountByYearByCategory[]>((acc, item) => {
+      const category = acc.find((count) => count.category === item.category);
+      if (category) {
+        category.count += 1;
+      } else {
+        acc.push({ blogtypeid: item.blogtypeid, category: item.category, count: 1 });
+      }
+      return acc;
+    }, []);
   }
 }

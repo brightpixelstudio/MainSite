@@ -1,5 +1,3 @@
-Blog page is currently under construction. Please check back later for updates.
-<!-- 
 <div class="row" id="blog-section">
   <div class="blog-container col-12">
     <div class="row">
@@ -30,13 +28,15 @@ Blog page is currently under construction. Please check back later for updates.
                   id="blogtypeid"
                   name="blogtypeid"
                 >
-                  @for (type of getBlogInformation.getallblogtypes; track type.blogtypeid) {
+                  @for (type of getBlogInformation[0].data; track type) {
                     <option value="{{ type.blogtypeid }}">{{ type.category }}</option>
                   }
                 </select>
               </td>
 
-              <td class="fit-content"><h5>Year:</h5></td>
+              <td class="fit-content">
+                <h5>Year:</h5>
+              </td>
               <td>
                 <select
                   [ngModel]="year"
@@ -45,8 +45,8 @@ Blog page is currently under construction. Please check back later for updates.
                   id="year"
                   (ngModelChange)="onYearSelect($event)"
                 >
-                  @for (year of getBlogInformation.getallblogpostyears; track year.uniqueYear) {
-                    <option value="{{ year.uniqueYear }}">{{ year.uniqueYear }}</option>
+                  @for (year of getBlogInformation[1].data; track year) {
+                    <option value="{{ year.uniqueyear }}">{{ year.uniqueyear }}</option>
                   }
                 </select>
               </td>
@@ -56,12 +56,11 @@ Blog page is currently under construction. Please check back later for updates.
         <div class="col-lg-1 col-sm-1"></div>
       </div>
     </div>
-
     <div class="row">
       <div class="col-lg-1 col-sm-1"></div>
       <div class="col-lg-7 col-sm-7">
         @if (isContentLoaded) {
-          @for (post of getBlogInformation.postsbasedontypeandyear; track post.blogpostid) {
+          @for (post of getBlogInformation[2].data; track post.blogpostid) {
             <div class="row">
               <div class="col-lg-12 col-sm-12">
                 <h2 style="padding: 0px">{{ post.title }}</h2>
@@ -116,6 +115,7 @@ Blog page is currently under construction. Please check back later for updates.
             </div>
           </div>
         }
+        <!--
       </div>
       <div class="col-lg-3 col-sm-3 ps-5">
         <h2>Lastest Posts</h2>
@@ -149,6 +149,7 @@ Blog page is currently under construction. Please check back later for updates.
           <div class="col-lg-12 col-sm-12"><hr /></div>
         </div>
         <h2>Categories for {{ year }}</h2>
+
         @for (post of getBlogInformation.getallpostscountbyyearbycategory; track post.category) {
           <div class="row">
             <div class="col-lg-12 col-sm-12">
@@ -188,7 +189,8 @@ Blog page is currently under construction. Please check back later for updates.
         }
         <div class="row pb-5"></div>
       </div>
+    -->
+      </div>
     </div>
   </div>
 </div>
--->
