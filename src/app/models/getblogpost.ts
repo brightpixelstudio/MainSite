@@ -6,4 +6,5 @@ export interface GetBlogPost {
   dateposted: Date;
   author: string;
   category: string;
+  blogtypeid: number;
 }

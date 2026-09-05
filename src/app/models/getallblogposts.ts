@@ -7,4 +7,5 @@ export interface GetAllBlogPosts {
   dateposted: Date;
   author: string;
   category: string;
+  blogtypeid: number;
 }

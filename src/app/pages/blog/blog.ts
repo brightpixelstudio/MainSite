@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BlogType } from '../../enums/blogtype';
 import { GetAllBlogPosts } from '../../models/getallblogposts';
+import { GetAllBlogTypes } from '../../models/getallblogtypes';
+import { GetAllBlogPostYears } from '../../models/getallblogpostyears';
 
 @Component({
   selector: 'blog',
@@ -19,11 +21,16 @@ export class Blog {
   noContent: boolean = true;
   blogpostid: number = 5;
   allBlogPostList: GetAllBlogPosts[] = [];
+  getallblogtypes: GetAllBlogTypes[] = [];
+  getallblogpostyears: GetAllBlogPostYears[] = [];
 
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit(): void {
     this.loadAllPosts();
+    this.loadAllBlogPostYears();
+    this.loadAllBlogTypes();
+    //this.loadPosts();
   }
 
   onCatagorySelect(selectedValue: any): void {
@@ -88,6 +95,7 @@ export class Blog {
         dateposted: new Date('2026-08-20'),
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
+        blogtypeid: BlogType.Design,
       },
       {
         blogpostid: 2,
@@ -108,6 +116,7 @@ export class Blog {
         dateposted: new Date('2026-07-28'),
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
+        blogtypeid: BlogType.Design,
       },
       {
         blogpostid: 3,
@@ -122,6 +131,7 @@ export class Blog {
         dateposted: new Date('2026-07-22'),
         author: 'Brett Mitchell',
         category: `${BlogType.Development}`,
+        blogtypeid: BlogType.Development,
       },
       {
         blogpostid: 4,
@@ -149,6 +159,7 @@ export class Blog {
         dateposted: new Date('2026-07-20'),
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
+        blogtypeid: BlogType.Design,
       },
       {
         blogpostid: 5,
@@ -163,6 +174,7 @@ export class Blog {
         dateposted: new Date('2026-08-20'),
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
+        blogtypeid: BlogType.Design,
       },
       {
         blogpostid: 6,
@@ -177,6 +189,7 @@ export class Blog {
         dateposted: new Date('2026-06-20'),
         author: 'Brett Mitchell',
         category: `${BlogType.Design}`,
+        blogtypeid: BlogType.Design,
       },
       {
         blogpostid: 7,
@@ -191,10 +204,70 @@ export class Blog {
         dateposted: new Date('2026-06-04'),
         author: 'Brett Mitchell',
         category: `${BlogType.Development}`,
+        blogtypeid: BlogType.Development,
       },
     ];
+    console.log('allBlogPostList', this.allBlogPostList);
+  }
 
-    // call the load post function
-    console.log(this.allBlogPostList);
+  loadAllBlogPostYears() {
+    // get all blog post years (Change to API call later)
+    const unique = [...new Set(this.allBlogPostList.map((item) => item.dateposted.getFullYear()))];
+    this.getallblogpostyears = unique.map((year) => ({ uniqueyear: year }));
+    console.log('getallblogpostyears', this.getallblogpostyears);
+  }
+
+  loadAllBlogTypes() {
+    // get all blog post years (Change to API call later)
+    const unique = Array.from(
+      new Map(this.allBlogPostList.map((item) => [item.category, item])).values(),
+    );
+
+    //this.getallblogtypes = unique.map((year) => ({ uniqueyear: year }));
+    console.log('getallblogtypes', unique);
+
+    /*
+    this.getallblogtypes = [
+      {
+        blogtypeid: 1,
+        category: 'Development',
+      },
+      {
+        blogtypeid: 2,
+        category: 'Design',
+      },
+    ];
+    */
+    //console.log('getallblogtypes', unique);
+  }
+
+  private loadPosts(): void {
+    // get ALL Blog information
+    this.isContentLoaded = false;
+    this.noContent = false;
+
+    /*
+    this.apiService.getBlogInformation(this.year, this.month, this.blogtypeid).subscribe({
+      next: (data) => {
+        // Data maps exactly to the keys defined in forkJoin
+        this.getBlogInformation = data;
+        console.log(this.getBlogInformation);
+
+        // shorten the summary if needed
+        for (const post of this.getBlogInformation.getlatestblogposts) {
+          post.summary = truncateString(post.summary, 110);
+        }
+
+        // load a blog post
+        this.isContentLoaded = true;
+        this.cdr.detectChanges();
+      },
+      error: (err) => {
+        this.noContent = true;
+        this.cdr.detectChanges();
+        console.error('One or more requests failed:', err);
+      },
+    });
+    */
   }
 }

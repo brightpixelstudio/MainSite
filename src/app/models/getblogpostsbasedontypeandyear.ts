@@ -6,4 +6,5 @@ export interface GetBlogPostsBasedOnTypeAndYear {
   dateposted: Date;
   author: string;
   category: string;
+  blogtypeid: number;
 }
