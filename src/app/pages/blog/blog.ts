@@ -6,6 +6,9 @@ import { BlogType } from '../../enums/blogtype';
 import { GetAllBlogPosts } from '../../models/getallblogposts';
 import { GetAllBlogTypes } from '../../models/getallblogtypes';
 import { GetAllBlogPostYears } from '../../models/getallblogpostyears';
+import { GetBlogPostsBasedOnTypeAndYear } from '../../models/getblogpostsbasedontypeandyear';
+import { GetLatestBlogPosts } from '../../models/getlatestblogposts';
+import { truncateString } from '../../utils/utils';
 
 @Component({
   selector: 'blog',
@@ -23,6 +26,8 @@ export class Blog {
   allBlogPostList: GetAllBlogPosts[] = [];
   getallblogtypes: GetAllBlogTypes[] = [];
   getallblogpostyears: GetAllBlogPostYears[] = [];
+  getBlogPostsBasedOnTypeAndYear: GetBlogPostsBasedOnTypeAndYear[] = [];
+  getLatestBlogPosts: GetLatestBlogPosts[] = [];
 
   constructor(private cdr: ChangeDetectorRef) {}
 
@@ -30,7 +35,7 @@ export class Blog {
     this.loadAllPosts();
     this.loadAllBlogPostYears();
     this.loadAllBlogTypes();
-    //this.loadPosts();
+    this.loadPosts();
   }
 
   onCatagorySelect(selectedValue: any): void {
@@ -94,7 +99,7 @@ export class Blog {
         url: 'responsive-design',
         dateposted: new Date('2026-08-20'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Design}`,
+        category: 'Design',
         blogtypeid: BlogType.Design,
       },
       {
@@ -115,7 +120,7 @@ export class Blog {
         url: 'web-design-and-fonts',
         dateposted: new Date('2026-07-28'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Design}`,
+        category: 'Design',
         blogtypeid: BlogType.Design,
       },
       {
@@ -130,7 +135,7 @@ export class Blog {
         url: 'blog-post-3',
         dateposted: new Date('2026-07-22'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Development}`,
+        category: 'Development',
         blogtypeid: BlogType.Development,
       },
       {
@@ -158,7 +163,7 @@ export class Blog {
         url: 'web-design-wireframing',
         dateposted: new Date('2026-07-20'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Design}`,
+        category: 'Design',
         blogtypeid: BlogType.Design,
       },
       {
@@ -171,9 +176,9 @@ export class Blog {
         summary:
           'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
         url: 'blog-post-5',
-        dateposted: new Date('2026-08-20'),
+        dateposted: new Date('2026-08-21'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Design}`,
+        category: 'Design',
         blogtypeid: BlogType.Design,
       },
       {
@@ -188,7 +193,7 @@ export class Blog {
         url: 'blog-post-6',
         dateposted: new Date('2026-06-20'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Design}`,
+        category: 'Design',
         blogtypeid: BlogType.Design,
       },
       {
@@ -201,9 +206,9 @@ export class Blog {
         summary:
           'Blog Post 7 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>',
         url: 'blog-post-7',
-        dateposted: new Date('2026-06-04'),
+        dateposted: new Date('2025-06-04'),
         author: 'Brett Mitchell',
-        category: `${BlogType.Development}`,
+        category: 'Development',
         blogtypeid: BlogType.Development,
       },
     ];
@@ -219,26 +224,29 @@ export class Blog {
 
   loadAllBlogTypes() {
     // get all blog post years (Change to API call later)
-    const unique = Array.from(
-      new Map(this.allBlogPostList.map((item) => [item.category, item])).values(),
-    );
-
-    //this.getallblogtypes = unique.map((year) => ({ uniqueyear: year }));
-    console.log('getallblogtypes', unique);
-
-    /*
-    this.getallblogtypes = [
-      {
-        blogtypeid: 1,
-        category: 'Development',
-      },
-      {
-        blogtypeid: 2,
-        category: 'Design',
-      },
+    const unique = [
+      ...new Map(this.allBlogPostList.map((item) => [item.blogtypeid, item])).values(),
     ];
-    */
-    //console.log('getallblogtypes', unique);
+
+    this.getallblogtypes = unique.map((item) => ({
+      blogtypeid: item.blogtypeid,
+      category: item.category,
+    }));
+    console.log('getallblogtypes', this.getallblogtypes);
+  }
+
+  filterBlogPostsBasedOnTypeAndYear(
+    allPosts: GetAllBlogPosts[],
+    year: number,
+    blogtypeid: number | undefined,
+    month: number | undefined,
+  ): GetAllBlogPosts[] {
+    return allPosts.filter(
+      (post) =>
+        post.dateposted.getFullYear() === year &&
+        (blogtypeid === undefined || post.blogtypeid === blogtypeid) &&
+        (month === undefined || post.dateposted.getMonth() === month),
+    );
   }
 
   private loadPosts(): void {
@@ -246,28 +254,45 @@ export class Blog {
     this.isContentLoaded = false;
     this.noContent = false;
 
+    // get the blog posts based on the year, month, and blog type
+    this.getBlogPostsBasedOnTypeAndYear = this.filterBlogPostsBasedOnTypeAndYear(
+      this.allBlogPostList,
+      this.year,
+      this.blogtypeid,
+      this.month,
+    );
+    console.log('getBlogPostsBasedOnTypeAndYear', this.getBlogPostsBasedOnTypeAndYear);
+
+    // get the latest blog posts
+    this.getLatestBlogPosts = [...this.allBlogPostList]
+      .sort((a, b) => b.dateposted.getTime() - a.dateposted.getTime())
+      .slice(0, 4);
+
+    // shorten the summary if needed
+    for (const post of this.getLatestBlogPosts) {
+      post.summary = truncateString(post.summary, 110);
+    }
+    console.log('getLatestBlogPosts', this.getLatestBlogPosts);
+
+    // get the count of posts per year and category
+    //const getallpostscountbyyearbycategory;
+
+    // content is loaded, so set the flag to true and detect changes
+    this.isContentLoaded = true;
+    this.cdr.detectChanges();
+
     /*
     this.apiService.getBlogInformation(this.year, this.month, this.blogtypeid).subscribe({
       next: (data) => {
         // Data maps exactly to the keys defined in forkJoin
         this.getBlogInformation = data;
-        console.log(this.getBlogInformation);
 
         // shorten the summary if needed
         for (const post of this.getBlogInformation.getlatestblogposts) {
           post.summary = truncateString(post.summary, 110);
         }
 
-        // load a blog post
-        this.isContentLoaded = true;
-        this.cdr.detectChanges();
       },
-      error: (err) => {
-        this.noContent = true;
-        this.cdr.detectChanges();
-        console.error('One or more requests failed:', err);
-      },
-    });
     */
   }
 }
