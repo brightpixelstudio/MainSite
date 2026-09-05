@@ -1,0 +1,49 @@
+<div class="row" id="blog-section">
+  <div class="blog-container col-12">
+    <div class="row">
+      <div class="col-lg-1 col-sm-1"></div>
+      <div class="col-lg-10 col-sm-10">
+        @if (isContentLoaded) {
+          @for (post of blogPost; track post.blogpostid) {
+            <div class="row mt-4" {}>
+              <div class="col-lg-12 col-sm-12">
+                <h1 style="padding: 0px">{{ post.title }}</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-sm-12">
+                <table class="table table-sm">
+                  <tr>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/calender.png" />{{
+                        post.dateposted | date: 'mediumDate'
+                      }}
+                    </td>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/tag.png" />{{ post.category }}
+                    </td>
+                    <td class="pe-4">
+                      <img class="pe-2" src="../../images/blog/person.png" />{{ post.author }}
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row pb-5">
+              <div class="col-lg-5 col-sm-5">
+                <img
+                  class="img-fluid img-thumbnail"
+                  src="../../images/blog/post{{ post.blogpostid }}.jpg"
+                />
+              </div>
+              <div class="col-lg-7 col-sm-7">
+                <p class="summary"><span [innerHTML]="content"></span></p>
+              </div>
+            </div>
+          }
+        }
+        <div class="col-lg-1 col-sm-1"></div>
+      </div>
+    </div>
+  </div>
+</div>
