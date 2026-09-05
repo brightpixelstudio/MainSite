@@ -58,19 +58,6 @@ export class Blog {
     //this.loadPosts();
   }
 
-  // TODO!
-  // Move this is a global function in a utility file if you want to use it in multiple places
-  truncateString(str: string, maxLength: number): string {
-    // If the string is already short enough, return it as-is
-    if (str.length <= maxLength) {
-      return str;
-    }
-
-    // Account for the 3 characters of the ellipsis
-    const ellipsis = '...';
-    return str.slice(0, maxLength - ellipsis.length) + ellipsis;
-  }
-
   loadAllPosts() {
     // fake blog posts (Change to API call later)
     this.allBlogPostList = [
