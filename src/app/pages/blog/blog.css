@@ -83,3 +83,7 @@ button {
 button:hover {
   background-color: rgb(255, 213, 122);
 }
+
+ul {
+  list-style: square;
+}

@@ -74,7 +74,7 @@ export function allBlogPostList() {
       content:
         'Web design has many different aspects to it.  From the intitial concept, to story telling, to layout, to wireframing, to graphic design, to front end development.  They all play a critical part to ensure the final product is what the customer had in mind.<br/><br/>' +
         'Focusing on the wireframe process, it is a simple, structural blueprint that outlines the layout, content hierarchy, and functionality of a webpage before any colors, fonts, or images are added.<br/><br/>' +
-        'Here are some of the key components of wireframing. ' +
+        'Here are some of the key components of wireframing.<br/><br/>' +
         '<li>' +
         '<ul>Navigation: Maps out menus, search bars, links, and breadcrumbs to guide user flow.</ul>' +
         '<ul>Layout Structure: Defines grids, margins, spacing, and overall content positioning.</ul>' +
@@ -82,7 +82,7 @@ export function allBlogPostList() {
         '<ul>Content Placeholders: Uses basic boxes, lines, and dummy text to represent headers, paragraphs, and media.</ul>' +
         '<ul>Annotations: Provides brief notes explaining user interactions or developer instructions.</ul>' +
         '</li>' +
-        'What are some of the benefits of wireframing.' +
+        'What are some of the benefits of wireframing.<br/><br/>' +
         '<li>' +
         '<ul>Early Feedback: Catches structural flaws or navigation issues before expensive coding begins.</ul>' +
         '<ul>Saves Time: Streamlines the transition from concept to high-fidelity mockups using platforms like Figma or Balsamiq.</ul>' +
