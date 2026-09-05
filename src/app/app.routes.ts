@@ -3,6 +3,7 @@ import { Home } from './pages/home/home';
 import { Technologies } from './pages/technologies/technologies';
 import { Getstarted } from './pages/getstarted/getstarted';
 import { Blog } from './pages/blog/blog';
+import { Blogpost } from './pages/blogpost/blogpost';
 /* import { Blogpost } from './pages/blogpost/blogpost'; */
 
 export const routes: Routes = [
@@ -10,5 +11,5 @@ export const routes: Routes = [
   { path: 'technologies', component: Technologies },
   { path: 'getstarted', component: Getstarted },
   { path: 'blog', component: Blog },
-  /*  { path: 'blog/:id', component: Blogpost }, */
+  { path: 'blog/:id', component: Blogpost },
 ];

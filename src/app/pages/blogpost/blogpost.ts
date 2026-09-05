@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import type { GetBlogPost } from '../../models/getblogpost';
+import { getBlogPost } from '../../utils/utils';
 
 @Component({
   selector: 'blogpost',
@@ -12,7 +13,7 @@ import type { GetBlogPost } from '../../models/getblogpost';
 export class Blogpost implements OnInit {
   postUrl!: string;
   content!: string;
-  blogPost: GetBlogPost[] = [];
+  blogPost!: GetBlogPost;
   isContentLoaded: boolean = false;
 
   constructor(
@@ -28,22 +29,12 @@ export class Blogpost implements OnInit {
   }
 
   private loadPost(url: string): void {
-    this.isContentLoaded = false;
+    // lets load the correct post
+    this.blogPost = getBlogPost(this.postUrl);
+    this.content = this.blogPost.content;
 
-    /*
-    this.apiService.getBlogPost(url).subscribe({
-      next: (data) => {
-        this.blogPost = data;
-        this.content = this.blogPost[0].content;
-
-        // Force Angular to run change detection on this component
-        this.isContentLoaded = true;
-        this.cdr.detectChanges();
-      },
-      error: (err) => {
-        console.error('One or more requests failed:', err);
-      },
-    });
-    */
+    // everything is loaded
+    this.isContentLoaded = true;
+    this.cdr.detectChanges();
   }
 }

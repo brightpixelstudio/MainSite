@@ -4,7 +4,7 @@
       <div class="col-lg-1 col-sm-1"></div>
       <div class="col-lg-10 col-sm-10">
         @if (isContentLoaded) {
-          @for (post of blogPost; track post.blogpostid) {
+          @if (blogPost; as post) {
             <div class="row mt-4" {}>
               <div class="col-lg-12 col-sm-12">
                 <h1 style="padding: 0px">{{ post.title }}</h1>
