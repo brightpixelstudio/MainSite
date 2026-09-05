@@ -43,20 +43,18 @@ export class Blog {
     this.loadAllBlogPostYears();
     this.loadAllBlogTypes();
     this.loadPosts();
-
-    console.log(this.getBlogInformation);
   }
 
   onCatagorySelect(selectedValue: any): void {
-    this.blogtypeid = selectedValue;
+    this.blogtypeid = Number(selectedValue);
     this.month = undefined;
-    //this.loadPosts();
+    this.loadPosts();
   }
 
   onYearSelect(selectedValue: any): void {
-    this.year = selectedValue;
+    this.year = Number(selectedValue);
     this.month = undefined;
-    //this.loadPosts();
+    this.loadPosts();
   }
 
   onCategoryLinkClick(event: MouseEvent, blogtypeid: number) {
@@ -66,7 +64,7 @@ export class Blog {
     // set the new catagory type and get contents
     this.month = undefined;
     this.blogtypeid = blogtypeid;
-    //this.loadPosts();
+    this.loadPosts();
   }
 
   onArchiveLinkClick(event: MouseEvent, month: number) {
@@ -76,7 +74,7 @@ export class Blog {
     // set the new catagory type and get contents
     this.blogtypeid = undefined;
     this.month = month;
-    //this.loadPosts();
+    this.loadPosts();
   }
 
   loadAllPosts() {
@@ -221,7 +219,6 @@ export class Blog {
         blogtypeid: BlogType.Development,
       },
     ];
-    console.log('allBlogPostList', this.allBlogPostList);
   }
 
   private loadAllBlogPostYears() {
@@ -265,7 +262,7 @@ export class Blog {
     for (const post of cloned) {
       post.summary = truncateString(post.summary, 110);
     }
-    this.getLatestBlogPosts = posts;
+    this.getLatestBlogPosts = cloned;
 
     // get the count of posts per year and category
     this.getAllPostsCountByYearByCategory = this.getPostCountByYearByCategory(
@@ -274,7 +271,7 @@ export class Blog {
     );
 
     // get the count of posts per year and month
-    // this.getAllPostsCountByYearByMonth
+    this.getAllPostsCountByYearByMonth = [];
     this.getAllPostsCountByYearByMonth = this.getPostCountByYearByMonth(
       this.allBlogPostList,
       this.year,
@@ -299,23 +296,11 @@ export class Blog {
       data: this.getAllPostsCountByYearByMonth,
     });
 
+    console.log(this.getBlogInformation);
+
     // content is loaded, so set the flag to true and detect changes
     this.isContentLoaded = true;
     this.cdr.detectChanges();
-
-    /*
-    this.apiService.getBlogInformation(this.year, this.month, this.blogtypeid).subscribe({
-      next: (data) => {
-        // Data maps exactly to the keys defined in forkJoin
-        this.getBlogInformation = data;
-
-        // shorten the summary if needed
-        for (const post of this.getBlogInformation.getlatestblogposts) {
-          post.summary = truncateString(post.summary, 110);
-        }
-
-      },
-    */
   }
 
   // helper functions
@@ -325,6 +310,12 @@ export class Blog {
     blogtypeid: number | undefined,
     month: number | undefined,
   ): GetAllBlogPosts[] {
+    const test = allPosts.filter(
+      (post) =>
+        post.dateposted.getFullYear() === year &&
+        (blogtypeid === undefined || post.blogtypeid === blogtypeid),
+    );
+
     return allPosts.filter(
       (post) =>
         post.dateposted.getFullYear() === year &&

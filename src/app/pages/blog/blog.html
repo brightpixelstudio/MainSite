@@ -115,11 +115,10 @@
             </div>
           </div>
         }
-        <!--
       </div>
       <div class="col-lg-3 col-sm-3 ps-5">
         <h2>Lastest Posts</h2>
-        @for (post of getBlogInformation.getlatestblogposts; track post.blogpostid) {
+        @for (post of getBlogInformation[3].data; track post.blogpostid) {
           <div class="row">
             <div class="col-lg-5 col-sm-5">
               <a [routerLink]="['/blog', post.url]">
@@ -148,9 +147,9 @@
         <div class="row">
           <div class="col-lg-12 col-sm-12"><hr /></div>
         </div>
-        <h2>Categories for {{ year }}</h2>
 
-        @for (post of getBlogInformation.getallpostscountbyyearbycategory; track post.category) {
+        <h2>Categories for {{ year }}</h2>
+        @for (post of getBlogInformation[4].data; track post.category) {
           <div class="row">
             <div class="col-lg-12 col-sm-12">
               <h5 class="latest">
@@ -174,7 +173,7 @@
           </div>
         </div>
         <h2>Archive for {{ year }}</h2>
-        @for (post of getBlogInformation.getallpostscountbyyearbymonth; track post.month) {
+        @for (post of getBlogInformation[5].data; track post.month) {
           <div class="row">
             <div class="col-lg-12 col-sm-12">
               <h5 class="latest">
@@ -188,8 +187,6 @@
           </div>
         }
         <div class="row pb-5"></div>
-      </div>
-    -->
       </div>
     </div>
   </div>
