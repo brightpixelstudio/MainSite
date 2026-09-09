@@ -78,7 +78,7 @@ export function allBlogPostList() {
         '30% Secondary Color (The Structure): Used for main layout elements, text blocks, or navigation sidebars to reinforce the sites structural boundaries and brand identity.<br/><br/>' +
         '10% Accent Color (The Action): A vivid, highly saturated color strictly for focal points, alerts, and primary conversion links or buttons. </li>',
       summary:
-        'Choosing the right colors for your website design/branding is very important. Its based around a concept called Color theory./n/n' +
+        'Choosing the right colors for your website design/branding is very important. Its based around a concept called Color theory.  ' +
         'Color theory is a vital framework used to create websites that are visually appealing and accessible. By understanding how color interactions affects the user experience (UX) and brand identity, designers can guide attention and drive interaction. Some core principles of this are listed below.',
 
       url: 'color-theory',
