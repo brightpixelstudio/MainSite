@@ -55,18 +55,37 @@ export function allBlogPostList() {
     },
     {
       blogpostid: 3,
-      title: 'Blog Post 3',
+      title: 'Color Design',
       content:
-        'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
-        'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
-        'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        'Choosing the right colors for your website design/branding is very important. Its based around a concept called Color theory. <br/><br/>' +
+        'Color theory is a vital framework used to create websites that are visually appealing and accessible. By understanding how color interactions affects the user experience (UX) and brand identity, designers can guide attention and drive interaction. Some core principles of this are listed below.<br/><br/>' +
+        '<strong>The Core Properties of Digital Color</strong><br/><br/>' +
+        'Unlike physical print which uses subtractive CMYK color, website design functions on the RGB color model (Red, Green, Blue) emitted by digital screens. When customizing colors, three key properties are affected:<br/><br/>' +
+        'Hue: The pure color itself (e.g., green, blue, or yellow) determined by its position on the color wheel. <br/><br/>' +
+        'Saturation: The vividness or intensity of the color. High saturation makes a color pop; low saturation drags it closer to gray, making it look toned down. <br/><br/>' +
+        'Lightness: The perceived brightness of a color relative to pure white. Adding white creates a tint, while adding black creates a shade. ' +
+        '_____________________________________________________________________________________________________________________________________ ' +
+        '<br/><br/><strong>Strategic Color Harmonies</strong><br/><br/>' +
+        'To build an balanced palette from scratch, designers turn to the traditional color wheel to establish harmonies: <br/><br/>' +
+        'Analogous: Colors sitting next to each other on the color wheel (e.g., blue, blue-green, and green). This provides an inherently peaceful, natural aesthetic.<br/><br/>' +
+        'Monochromatic: Using variations of a single hue with different saturations and values. It looks clean, organized, and minimizes visual noise.<br/><br/>' +
+        'Complementary: Colors directly opposite each other on the color wheel (e.g., blue and orange). This creates maximum contrast and is highly effective for creatig call-to-action (CTA) elements.<br/><br/>' +
+        'Triadic: Three colors evenly spaced around the wheel (e.g., red, yellow, and blue). It offers high visual contrast but requires careful balancing to avoid looking overwhelming.<br/>' +
+        '_____________________________________________________________________________________________________________________________________' +
+        '<br/><br/><strong>Application: The 60-30-10 Rule</strong><br/><br/>' +
+        'A good color scheme can easily fail without proper layout proportion. Web design borrows the 60-30-10 distribution rule from interior design to create an intuitive visual hierarchy:<br/><br/>' +
+        '60% Dominant Color (The Canvas): Typically a clean and neutral like white, light gray, or dark charcoal used for the primary background space. <br/><br/>' +
+        '30% Secondary Color (The Structure): Used for main layout elements, text blocks, or navigation sidebars to reinforce the sites structural boundaries and brand identity.<br/><br/>' +
+        '10% Accent Color (The Action): A vivid, highly saturated color strictly for focal points, alerts, and primary conversion links or buttons. </li>',
       summary:
-        'Blog Post 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
-      url: 'blog-post-3',
-      dateposted: new Date('2026-07-22'),
+        'Choosing the right colors for your website design/branding is very important. Its based around a concept called Color theory. <br/><br/>' +
+        'Color theory is a vital framework used to create websites that are visually appealing and accessible. By understanding how color interactions affects the user experience (UX) and brand identity, designers can guide attention and drive interaction. Some core principles of this are listed below.',
+
+      url: 'color-theory',
+      dateposted: new Date('2026-09-09'),
       author: 'Brett Mitchell',
-      category: 'Development',
-      blogtypeid: BlogType.Development,
+      category: 'Design',
+      blogtypeid: BlogType.Design,
     },
     {
       blogpostid: 4,
