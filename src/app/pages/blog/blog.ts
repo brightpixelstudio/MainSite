@@ -101,7 +101,7 @@ export class Blog {
   private loadPosts(): void {
     // get ALL Blog information
     this.isContentLoaded = false;
-    this.noContent = false;
+    this.noContent = true;
 
     // get the blog posts based on the year, month, and blog type
     this.getBlogPostsBasedOnTypeAndYear = this.filterBlogPostsBasedOnTypeAndYear(
@@ -155,10 +155,16 @@ export class Blog {
       data: this.getAllPostsCountByYearByMonth,
     });
 
-    //console.log(this.getBlogInformation);
+    // are there any posts?
+    if (this.getBlogPostsBasedOnTypeAndYear.length == 0) {
+      this.isContentLoaded = true;
+      this.noContent = true;
+      return;
+    }
 
     // content is loaded, so set the flag to true and detect changes
     this.isContentLoaded = true;
+    this.noContent = false;
     this.cdr.detectChanges();
   }
 
