@@ -117,18 +117,25 @@ export function allBlogPostList() {
     },
     {
       blogpostid: 5,
-      title: 'Blog Post 5',
+      title: 'Development - Application Programming Interface',
       content:
-        'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.<br/><br/>' +
-        'Proin aliquet quam quis gravida euismod. Vivamus nec ante nulla. Aenean bibendum, eros et tristique accumsan, est magna suscipit justo, a blandit felis mi non risus. Pellentesque felis libero, feugiat vitae suscipit vel, vulputate sit amet dolor. Vivamus scelerisque in neque vitae tincidunt. Integer tempor eu arcu at vehicula. Donec quis felis quis arcu feugiat efficitur. Integer scelerisque congue ipsum, ut faucibus urna gravida ut. In mattis nisl sed ultricies semper. Donec aliquet eros elit, sit amet lobortis nibh vestibulum eget. Curabitur id diam placerat quam semper semper. Vestibulum consectetur magna vitae sapien vulputate, ac venenatis nibh iaculis. Donec gravida libero in nibh faucibus pulvinar. In cursus arcu nec dolor hendrerit, ut tristique ipsum dapibus.<br/><br/>' +
-        'Sed ultricies luctus suscipit. Ut massa nibh, porttitor at placerat quis, viverra vel ex. Proin mattis porta interdum. Ut vitae ligula sapien. Integer vehicula, ex sed mollis consequat, diam urna ultrices neque, eu sagittis turpis elit quis elit. Proin egestas, enim in pharetra condimentum, ligula odio ultricies tortor, ac tempor quam purus ac nunc. Quisque tempus, massa in auctor malesuada, nibh lacus auctor sapien, sed dictum odio diam non purus. Vestibulum maximus magna ac odio condimentum, eget venenatis elit ornare. Pellentesque viverra pellentesque ex, vitae scelerisque ex convallis non. Donec eget cursus mauris, sed vestibulum odio. Cras euismod pretium dolor, eu tincidunt nibh bibendum sodales. Suspendisse aliquam placerat ultrices. Duis ultrices porttitor ex, sed fermentum mi pellentesque in.',
+        'An API, or Application Programming Interface, is a set of rules that allows different applications to communicate and share data with one another. <br/><br/>' +
+        'Think of an API as a digital middleman. Instead of a developer building every single feature from scratch, they use an API to request information or features from an existing system. <br/><br/>' +
+        'The Restaurant Analogy. To understand how it works without the technical jargon, imagine sitting at a restaurant: <br/><br/>' +
+        'The Client (You): You are looking at a menu and want to order some food. <br/><br/>' +
+        'The server (The Kitchen), this is where the food is prepared and the (data) lives.' +
+        'The API (The Waiter): The waiter takes your order (the request), walks it over to the kitchen, and delivers your food (the response) back to your table. You dont really need to know how the kitchen cooks the food; you just need to know how to talk to the waiter to get what you want. <hr/>' +
+        'You interact with APIs every single day without realizing it.<br/><br/>' +
+        'Weather Apps: When you check the weather on your phone, the app doesnt track global weather systems itself. It calls a weather API to obtain the latest temperatures and displays them to you. <br/><br/>' +
+        'Ride-Sharing & Travel: Apps like Uber use the Google Maps API to show your drivers location on a map rather than building their own mapping infrastructure. <br/><br/>' +
+        'Pay with PayPal/Apple Pay: When an online clothing store lets you checkout securely using PayPal, it uses a payment processing API to securely manage your banking details.',
       summary:
-        'Blog Post 5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in sodales justo. Nullam tristique aliquet justo eu lacinia. Nam pellentesque eleifend pretium. Sed sit amet ligula sit amet est euismod lobortis. Praesent quis dictum mauris. Nunc ut augue et arcu consectetur porta ac ac magna. Etiam lacinia elit vitae ex finibus, at venenatis tellus blandit. Fusce ornare placerat sem, id malesuada libero egestas blandit. Nam accumsan tellus metus, et luctus libero auctor nec. Aliquam volutpat lorem a eros dignissim hendrerit. Morbi volutpat egestas pellentesque. Fusce quis dignissim lectus, non viverra sapien. Praesent scelerisque sem in nibh sagittis auctor. Sed tristique ante augue, eu lobortis ligula venenatis eget. Sed molestie leo nec porttitor consequat. Proin elit mauris, iaculis et justo a, semper dapibus dui.',
-      url: 'blog-post-5',
-      dateposted: new Date('2026-08-21'),
+        'An API, or Application Programming Interface, is a set of rules that allows different applications to communicate and share data with one another.',
+      url: 'development-application-programming-interface',
+      dateposted: new Date('2026-08-29'),
       author: 'Brett Mitchell',
-      category: 'Design',
-      blogtypeid: BlogType.Design,
+      category: 'Development',
+      blogtypeid: BlogType.Development,
     },
     {
       blogpostid: 6,
